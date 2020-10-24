@@ -1,0 +1,47 @@
+<%= form_for(home) do |f| %>
+  <% if home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :categories %>
+    <%= f.text_field :categories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category_name %>
+    <%= f.text_field :category_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article_title %>
+    <%= f.text_field :article_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article_description %>
+    <%= f.text_area :article_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_published %>
+    <%= f.text_field :date_published %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

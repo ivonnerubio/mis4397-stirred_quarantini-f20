@@ -1,0 +1,137 @@
+<%= form_for(article) do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :article_rating %>
+    <%= f.text_field :article_rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :abstract %>
+    <%= f.text_area :abstract %>
+  </div>
+
+  <div class="field">
+    <%= f.label :introduction %>
+    <%= f.text_area :introduction %>
+  </div>
+
+  <div class="field">
+    <%= f.label :case_presentation %>
+    <%= f.text_area :case_presentation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :discussion %>
+    <%= f.text_area :discussion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :conclusion %>
+    <%= f.text_area :conclusion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :appendice %>
+    <%= f.text_area :appendice %>
+  </div>
+
+  <div class="field">
+    <%= f.label :references %>
+    <%= f.text_area :references %>
+  </div>
+
+  <div class="field">
+    <%= f.label :disclosures_agreements %>
+    <%= f.text_area :disclosures_agreements %>
+  </div>
+
+  <div class="field">
+    <%= f.label :forum_comments %>
+    <%= f.text_area :forum_comments %>
+  </div>
+
+  <div class="field">
+    <%= f.label :categories %>
+    <%= f.text_field :categories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keywords %>
+    <%= f.text_field :keywords %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article_title %>
+    <%= f.text_field :article_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article_author %>
+    <%= f.text_field :article_author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :article_info %>
+    <%= f.text_field :article_info %>
+  </div>
+
+  <div class="field">
+    <%= f.label :figures %>
+    <%= f.text_field :figures %>
+  </div>
+
+  <div class="field">
+    <%= f.label :metrics %>
+    <%= f.number_field :metrics %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pdf_download %>
+    <%= f.text_field :pdf_download %>
+  </div>
+
+  <div class="field">
+    <%= f.label :linked_in %>
+    <%= f.text_field :linked_in %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook %>
+  </div>
+
+  <div class="field">
+    <%= f.label :whats_app %>
+    <%= f.text_field :whats_app %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

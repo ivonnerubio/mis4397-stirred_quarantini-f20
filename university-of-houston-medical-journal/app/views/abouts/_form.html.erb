@@ -1,0 +1,57 @@
+<%= form_for(about) do |f| %>
+  <% if about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(about.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% about.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mission_statement %>
+    <%= f.text_field :mission_statement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :journal_description %>
+    <%= f.text_field :journal_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editorial_board %>
+    <%= f.text_field :editorial_board %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editorial_name %>
+    <%= f.text_field :editorial_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editorial_position %>
+    <%= f.text_field :editorial_position %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editorial_about_me %>
+    <%= f.text_field :editorial_about_me %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

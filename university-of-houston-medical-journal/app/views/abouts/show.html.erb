@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @about.title %>
+</p>
+
+<p>
+  <strong>Mission statement:</strong>
+  <%= @about.mission_statement %>
+</p>
+
+<p>
+  <strong>Journal description:</strong>
+  <%= @about.journal_description %>
+</p>
+
+<p>
+  <strong>Editorial board:</strong>
+  <%= @about.editorial_board %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @about.string %>
+</p>
+
+<p>
+  <strong>Editorial name:</strong>
+  <%= @about.editorial_name %>
+</p>
+
+<p>
+  <strong>Editorial position:</strong>
+  <%= @about.editorial_position %>
+</p>
+
+<p>
+  <strong>Editorial about me:</strong>
+  <%= @about.editorial_about_me %>
+</p>
+
+<%= link_to 'Edit', edit_about_path(@about) %> |
+<%= link_to 'Back', abouts_path %>

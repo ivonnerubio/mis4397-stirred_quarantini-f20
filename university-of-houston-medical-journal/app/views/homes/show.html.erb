@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @home.title %>
+</p>
+
+<p>
+  <strong>Categories:</strong>
+  <%= @home.categories %>
+</p>
+
+<p>
+  <strong>Category name:</strong>
+  <%= @home.category_name %>
+</p>
+
+<p>
+  <strong>Article title:</strong>
+  <%= @home.article_title %>
+</p>
+
+<p>
+  <strong>Article description:</strong>
+  <%= @home.article_description %>
+</p>
+
+<p>
+  <strong>Date published:</strong>
+  <%= @home.date_published %>
+</p>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>

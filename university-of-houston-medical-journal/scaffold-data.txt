@@ -1,0 +1,115 @@
+#Template for pages
+
+
+Home Page:
+ - Title: String 
+ - Categories Title: string
+      - Name Of Category: string
+      #Will be a card with a image to the Name
+     
+ - Featured Top Articles:
+  # Will be cards
+      - Article Title: string
+      - Article Description: text
+      - Date Published: string
+
+rails g scaffold Home title:string categories:string category_name:string article_title:string article_description:text date_published:string
+
+Article:
+  # Rating of the article will be shown here
+  - Rate Article
+    - Rating: float
+  # Navigation and links for more information about the article
+  - Article Navigation
+    - Abstract: text
+    - Introduction: text
+    - Case Presentation: text
+    - Discussion: text
+    - Conclusion: text
+    - Appendice: text 
+    - References: text
+    - Disclosures & Agreements: text
+    - Forum / Comments: text
+    - Categories: string
+    - Keywords: string
+    
+  # Each of the articles will have the same format
+  - Article Title: string
+    - Author: string 
+    - Article Info: string
+    - Figures: float
+    - Metrics: integer
+    - PDF Download: string
+    
+  #Social Media links to share the Article
+  - LinkedIn: string
+  - Twitter: string
+  - Facebook: string
+  - Other:
+    - WhatsApp: string
+    - Email: string 
+    
+rails g scaffold Article article_rating:float abstract:text introduction:text case_presentation:text discussion:text conclusion:text appendice:text references:text disclosures_agreements:text forum_comments:text categories:string keywords:string article_title:string article_author: string article_info:string figures:float metrics:integer pdf_download:string linked_in:string twitter:string facebook:string whats_app:string email:string 
+
+Specialties:
+ - Title: string
+ #Going to be a card with image
+ - Category Title: string
+ - Category Description: text
+
+ rails g scaffold Specialties title: string category_title: string category_description: text
+
+ 
+The Specific Specialty Chosen:
+ - Category Name: string
+ - Description: text
+
+ # cards of each article
+ - Type Of Data: string
+ - Title: string
+ - Description: text
+ - Authors: string
+ - AuthorID: string
+
+rails g scaffold Specific Specialty category_name: string description: text data_type: string data_title: string description:text authors: string authorID: string
+
+
+Blog:
+  - Blog Page Title: string
+  #Will be a card with an image
+  - Recent Posts: string
+    - Article Title: string
+  - Archives: string
+   - Year: integer
+  - Blog Post Title: string
+    - Body: string
+    - Continue Reading Link: string
+    - Author Name: string
+    - AuthorID: string
+    - Post Type: string
+    - Date: string
+    - Leave A Comment: string <link>
+  - Ad Space: string 
+
+rails g scaffold Blog title: 
+
+  Submit Research:
+  - Submit Research Title: string
+  - Title Of Submission: string
+  - Body of Submission: text
+  - Comments: text
+  - AuthorID: string
+  - Author Name: string
+
+
+About:
+  - Title: string
+  - Mission Statement: string
+  - Journal Description: string
+  - Editorial Board: string
+    - Name: string
+      Position: string
+      Short About Me: string
+ 
+rails g scaffold About title:string mission_statement:string journal_description:string editorial_board: string editorial_name:string editorial_position:string editorial_about_me:string
+

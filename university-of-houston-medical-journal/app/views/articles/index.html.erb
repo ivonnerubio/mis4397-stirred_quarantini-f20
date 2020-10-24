@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Article rating</th>
+      <th>Abstract</th>
+      <th>Introduction</th>
+      <th>Case presentation</th>
+      <th>Discussion</th>
+      <th>Conclusion</th>
+      <th>Appendice</th>
+      <th>References</th>
+      <th>Disclosures agreements</th>
+      <th>Forum comments</th>
+      <th>Categories</th>
+      <th>Keywords</th>
+      <th>Article title</th>
+      <th>Article author</th>
+      <th>String</th>
+      <th>Article info</th>
+      <th>Figures</th>
+      <th>Metrics</th>
+      <th>Pdf download</th>
+      <th>Linked in</th>
+      <th>Twitter</th>
+      <th>Facebook</th>
+      <th>Whats app</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.article_rating %></td>
+        <td><%= article.abstract %></td>
+        <td><%= article.introduction %></td>
+        <td><%= article.case_presentation %></td>
+        <td><%= article.discussion %></td>
+        <td><%= article.conclusion %></td>
+        <td><%= article.appendice %></td>
+        <td><%= article.references %></td>
+        <td><%= article.disclosures_agreements %></td>
+        <td><%= article.forum_comments %></td>
+        <td><%= article.categories %></td>
+        <td><%= article.keywords %></td>
+        <td><%= article.article_title %></td>
+        <td><%= article.article_author %></td>
+        <td><%= article.string %></td>
+        <td><%= article.article_info %></td>
+        <td><%= article.figures %></td>
+        <td><%= article.metrics %></td>
+        <td><%= article.pdf_download %></td>
+        <td><%= article.linked_in %></td>
+        <td><%= article.twitter %></td>
+        <td><%= article.facebook %></td>
+        <td><%= article.whats_app %></td>
+        <td><%= article.email %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>

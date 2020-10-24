@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  article_rating: 1.5
+  abstract: MyText
+  introduction: MyText
+  case_presentation: MyText
+  discussion: MyText
+  conclusion: MyText
+  appendice: MyText
+  references: MyText
+  disclosures_agreements: MyText
+  forum_comments: MyText
+  categories: MyString
+  keywords: MyString
+  article_title: MyString
+  article_author: MyString
+  string: MyString
+  article_info: MyString
+  figures: 1.5
+  metrics: 1
+  pdf_download: MyString
+  linked_in: MyString
+  twitter: MyString
+  facebook: MyString
+  whats_app: MyString
+  email: MyString
+
+two:
+  article_rating: 1.5
+  abstract: MyText
+  introduction: MyText
+  case_presentation: MyText
+  discussion: MyText
+  conclusion: MyText
+  appendice: MyText
+  references: MyText
+  disclosures_agreements: MyText
+  forum_comments: MyText
+  categories: MyString
+  keywords: MyString
+  article_title: MyString
+  article_author: MyString
+  string: MyString
+  article_info: MyString
+  figures: 1.5
+  metrics: 1
+  pdf_download: MyString
+  linked_in: MyString
+  twitter: MyString
+  facebook: MyString
+  whats_app: MyString
+  email: MyString

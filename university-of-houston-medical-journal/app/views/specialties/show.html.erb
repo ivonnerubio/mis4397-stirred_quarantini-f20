@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @specialty.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @specialty.string %>
+</p>
+
+<p>
+  <strong>Category title:</strong>
+  <%= @specialty.category_title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @specialty.string %>
+</p>
+
+<p>
+  <strong>Category description:</strong>
+  <%= @specialty.category_description %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @specialty.text %>
+</p>
+
+<%= link_to 'Edit', edit_specialty_path(@specialty) %> |
+<%= link_to 'Back', specialties_path %>

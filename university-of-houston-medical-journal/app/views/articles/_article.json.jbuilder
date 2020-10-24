@@ -1,0 +1,2 @@
+json.extract! article, :id, :article_rating, :abstract, :introduction, :case_presentation, :discussion, :conclusion, :appendice, :references, :disclosures_agreements, :forum_comments, :categories, :keywords, :article_title, :article_author, :string, :article_info, :figures, :metrics, :pdf_download, :linked_in, :twitter, :facebook, :whats_app, :email, :created_at, :updated_at
+json.url article_url(article, format: :json)

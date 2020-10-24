@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Specifics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Specialty</th>
+      <th>Category name</th>
+      <th>String</th>
+      <th>Description</th>
+      <th>Text</th>
+      <th>Data type</th>
+      <th>String</th>
+      <th>Data title</th>
+      <th>String</th>
+      <th>Description</th>
+      <th>Authors</th>
+      <th>String</th>
+      <th>Authorid</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specifics.each do |specific| %>
+      <tr>
+        <td><%= specific.Specialty %></td>
+        <td><%= specific.category_name %></td>
+        <td><%= specific.string %></td>
+        <td><%= specific.description %></td>
+        <td><%= specific.text %></td>
+        <td><%= specific.data_type %></td>
+        <td><%= specific.string %></td>
+        <td><%= specific.data_title %></td>
+        <td><%= specific.string %></td>
+        <td><%= specific.description %></td>
+        <td><%= specific.authors %></td>
+        <td><%= specific.string %></td>
+        <td><%= specific.authorID %></td>
+        <td><%= specific.string %></td>
+        <td><%= link_to 'Show', specific %></td>
+        <td><%= link_to 'Edit', edit_specific_path(specific) %></td>
+        <td><%= link_to 'Destroy', specific, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specific', new_specific_path %>

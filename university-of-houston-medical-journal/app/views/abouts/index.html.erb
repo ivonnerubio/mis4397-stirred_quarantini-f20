@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Abouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Mission statement</th>
+      <th>Journal description</th>
+      <th>Editorial board</th>
+      <th>String</th>
+      <th>Editorial name</th>
+      <th>Editorial position</th>
+      <th>Editorial about me</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abouts.each do |about| %>
+      <tr>
+        <td><%= about.title %></td>
+        <td><%= about.mission_statement %></td>
+        <td><%= about.journal_description %></td>
+        <td><%= about.editorial_board %></td>
+        <td><%= about.string %></td>
+        <td><%= about.editorial_name %></td>
+        <td><%= about.editorial_position %></td>
+        <td><%= about.editorial_about_me %></td>
+        <td><%= link_to 'Show', about %></td>
+        <td><%= link_to 'Edit', edit_about_path(about) %></td>
+        <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New About', new_about_path %>
