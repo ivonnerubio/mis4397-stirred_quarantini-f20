@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Research Submissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Page title</th>
+      <th>String</th>
+      <th>Submission title</th>
+      <th>String</th>
+      <th>Body of submission</th>
+      <th>Text</th>
+      <th>Comments</th>
+      <th>Text</th>
+      <th>Authorid</th>
+      <th>String</th>
+      <th>Author name</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @research_submissions.each do |research_submission| %>
+      <tr>
+        <td><%= research_submission.page_title %></td>
+        <td><%= research_submission.string %></td>
+        <td><%= research_submission.submission_title %></td>
+        <td><%= research_submission.string %></td>
+        <td><%= research_submission.body_of_submission %></td>
+        <td><%= research_submission.text %></td>
+        <td><%= research_submission.comments %></td>
+        <td><%= research_submission.text %></td>
+        <td><%= research_submission.authorID %></td>
+        <td><%= research_submission.string %></td>
+        <td><%= research_submission.author_name %></td>
+        <td><%= research_submission.string %></td>
+        <td><%= link_to 'Show', research_submission %></td>
+        <td><%= link_to 'Edit', edit_research_submission_path(research_submission) %></td>
+        <td><%= link_to 'Destroy', research_submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Research Submission', new_research_submission_path %>

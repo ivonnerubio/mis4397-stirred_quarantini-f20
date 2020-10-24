@@ -1,0 +1,77 @@
+<%= form_for(research_submission) do |f| %>
+  <% if research_submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(research_submission.errors.count, "error") %> prohibited this research_submission from being saved:</h2>
+
+      <ul>
+      <% research_submission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :page_title %>
+    <%= f.text_field :page_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :submission_title %>
+    <%= f.text_field :submission_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body_of_submission %>
+    <%= f.text_field :body_of_submission %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_field :comments %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :authorID %>
+    <%= f.text_field :authorID %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author_name %>
+    <%= f.text_field :author_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  page_title: MyString
+  string: MyString
+  submission_title: MyString
+  string: MyString
+  body_of_submission: MyString
+  text: MyString
+  comments: MyString
+  text: MyString
+  authorID: MyString
+  string: MyString
+  author_name: MyString
+  string: MyString
+
+two:
+  page_title: MyString
+  string: MyString
+  submission_title: MyString
+  string: MyString
+  body_of_submission: MyString
+  text: MyString
+  comments: MyString
+  text: MyString
+  authorID: MyString
+  string: MyString
+  author_name: MyString
+  string: MyString
