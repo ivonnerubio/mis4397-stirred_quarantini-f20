@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :research_submissions
   resources :blogs
   resources :abouts
   resources :specifics
