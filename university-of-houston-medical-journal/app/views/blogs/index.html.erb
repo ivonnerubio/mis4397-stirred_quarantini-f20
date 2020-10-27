@@ -1,71 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <div class="card bg-dark text-white text-center" style="width: 70rem;">
+    <img class="card-img" src="https://cdn.pixabay.com/photo/2014/11/01/17/42/lab-512503_1280.jpg" alt="Card image">
+      <div class="card-img-overlay">
+        <p></p><p></p><p></p><h5 class="card-title" style= "font-size: 60px;">The Cougar Med Blog</h5>
+        <p class="card-text" style= "font-size: 35px;">Leading scientific inquiry</p>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  <%= link_to 'New Blog', new_blog_path %>
 
-<h1>Blogs</h1>
+<%# I want to include a success alert when new blog posts have been made. How do I do this?
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div> %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>String</th>
-      <th>Recent posts</th>
-      <th>Text</th>
-      <th>Article title</th>
-      <th>String</th>
-      <th>Archives</th>
-      <th>Text</th>
-      <th>Year</th>
-      <th>Post title</th>
-      <th>String</th>
-      <th>Body</th>
-      <th>Text</th>
-      <th>Author name</th>
-      <th>String</th>
-      <th>Authorid</th>
-      <th>String</th>
-      <th>Post type</th>
-      <th>String</th>
-      <th>Comment section</th>
-      <th>Text</th>
-      <th>Ad space</th>
-      <th>String</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.recent_posts %></td>
-        <td><%= blog.text %></td>
-        <td><%= blog.article_title %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.archives %></td>
-        <td><%= blog.text %></td>
-        <td><%= blog.year %></td>
-        <td><%= blog.post_title %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.body %></td>
-        <td><%= blog.text %></td>
-        <td><%= blog.author_name %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.authorID %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.post_type %></td>
-        <td><%= blog.string %></td>
-        <td><%= blog.comment_section %></td>
-        <td><%= blog.text %></td>
-        <td><%= blog.ad_space %></td>
-        <td><%= blog.string %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="card text-center">
+  <div class="card-header">
+    Featured Blog Posts
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
 
-<br>
+<div class="col">
+  <% @blogs.each do |blog| %>
+    <div class="card mb-3" style ="max-width: 40rem;">
+      <img class="card-img-to" src="https://cdn.pixabay.com/photo/2020/03/05/19/18/technology-4905258_1280.jpg" alt="Card image cap" style= "max-width: 40rem; max-height: 30rem; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title"><%= blog.post_title %></h5>
+          <p class="card-text"><%= blog.text %></p>
+          <p class="card-text"><small class="text-muted"><%= blog.author_name %> | <%= blog.year %> | <%= blog.post_type %> | <%= blog.comment_section %></small></p>
+          <%= link_to 'Show', blog %>
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+  <% end %>
+</div>
 
-<%= link_to 'New Blog', new_blog_path %>
+
+</div>
