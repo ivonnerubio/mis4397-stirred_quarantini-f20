@@ -1,37 +1,55 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="header">
+    <h1>Specialties</h1>
+    <p id="notice"><%= notice %></p>
+  </div>
+  
+ 
+  <div class="row">
+      <% @specialties.each do |specialty| %>
+    <div class="card boarder col-6" style="width: 5rem;">
+    <img src= "https://www.northcountryhospital.org/wp-content/uploads/2019/04/C-Cardiology-newport-vermont-e1554726152791.png" style="width:500px;height:300px;class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title"><%= specialty.category_title %></h5>
+      <p class="card-text"><%= specialty.category_description %></p>
+      
+      </div>
+  </div>
+  <% end %>
+  </div>
+</div>
 
-<h1>Specialties</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>String</th>
-      <th>Category title</th>
-      <th>String</th>
-      <th>Category description</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Title</th>-->
+<!--      <th>String</th>-->
+<!--      <th>Category title</th>-->
+<!--      <th>String</th>-->
+<!--      <th>Category description</th>-->
+<!--      <th>Text</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
 
-  <tbody>
-    <% @specialties.each do |specialty| %>
-      <tr>
-        <td><%= specialty.title %></td>
-        <td><%= specialty.string %></td>
-        <td><%= specialty.category_title %></td>
-        <td><%= specialty.string %></td>
-        <td><%= specialty.category_description %></td>
-        <td><%= specialty.text %></td>
-        <td><%= link_to 'Show', specialty %></td>
-        <td><%= link_to 'Edit', edit_specialty_path(specialty) %></td>
-        <td><%= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!--  <tbody>-->
+<!--    <% @specialties.each do |specialty| %>-->
+<!--      <tr>-->
+<!--        <td><%= specialty.title %></td>-->
+<!--        <td><%= specialty.string %></td>-->
+<!--        <td><%= specialty.category_title %></td>-->
+<!--        <td><%= specialty.string %></td>-->
+<!--        <td><%= specialty.category_description %></td>-->
+<!--        <td><%= specialty.text %></td>-->
+<!--        <td><%= link_to 'Show', specialty %></td>-->
+<!--        <td><%= link_to 'Edit', edit_specialty_path(specialty) %></td>-->
+<!--        <td><%= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+<!--    <% end %>-->
+<!--  </tbody>-->
+<!--</table>-->
 
-<br>
+<!--<br>-->
 
-<%= link_to 'New Specialty', new_specialty_path %>
+<!--<%= link_to 'New Specialty', new_specialty_path %>-->
