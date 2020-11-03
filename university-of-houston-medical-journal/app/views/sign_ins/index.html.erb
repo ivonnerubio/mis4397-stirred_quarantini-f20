@@ -33,11 +33,9 @@
 <!--<%= link_to 'New Sign In', new_sign_in_path %>-->
 
 <form action="action_page.php" method="post">
-  <div class="Header">
-        <h1>Sign-In </h1>
-  </div>
-
   <div class="container">
+    <h1>Sign-In </h1>
+    
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -48,10 +46,10 @@
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
 
-  <div class="container" style="background-color:#f1f1f1">
+  <div class="buttons" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
+</div>
 </form>
