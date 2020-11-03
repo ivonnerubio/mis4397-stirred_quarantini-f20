@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sign_in.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @sign_in.string %>
+</p>
+
+<p>
+  <strong>Web data:</strong>
+  <%= @sign_in.web_data %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @sign_in.text %>
+</p>
+
+<%= link_to 'Edit', edit_sign_in_path(@sign_in) %> |
+<%= link_to 'Back', sign_ins_path %>

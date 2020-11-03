@@ -1,0 +1,57 @@
+<!--<p id="notice"><%= notice %></p>-->
+
+<!--<h1>Sign Ins</h1>-->
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Title</th>-->
+<!--      <th>String</th>-->
+<!--      <th>Web data</th>-->
+<!--      <th>Text</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+
+<!--  <tbody>-->
+<!--    <% @sign_ins.each do |sign_in| %>-->
+<!--      <tr>-->
+<!--        <td><%= sign_in.title %></td>-->
+<!--        <td><%= sign_in.string %></td>-->
+<!--        <td><%= sign_in.web_data %></td>-->
+<!--        <td><%= sign_in.text %></td>-->
+<!--        <td><%= link_to 'Show', sign_in %></td>-->
+<!--        <td><%= link_to 'Edit', edit_sign_in_path(sign_in) %></td>-->
+<!--        <td><%= link_to 'Destroy', sign_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+<!--    <% end %>-->
+<!--  </tbody>-->
+<!--</table>-->
+
+<!--<br>-->
+
+<!--<%= link_to 'New Sign In', new_sign_in_path %>-->
+
+<form action="action_page.php" method="post">
+  <div class="Header">
+        <h1>Sign-In </h1>
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>

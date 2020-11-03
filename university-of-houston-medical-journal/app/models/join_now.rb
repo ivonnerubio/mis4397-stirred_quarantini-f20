@@ -1,0 +1,2 @@
+class JoinNow < ApplicationRecord
+end
