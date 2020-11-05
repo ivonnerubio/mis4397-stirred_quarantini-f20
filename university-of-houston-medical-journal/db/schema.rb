@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201027163001) do
+ActiveRecord::Schema.define(version: 20201103174057) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "title"
@@ -85,6 +85,10 @@ ActiveRecord::Schema.define(version: 20201027163001) do
   end
 
   create_table "join_nows", force: :cascade do |t|
+    t.string   "title"
+    t.string   "string"
+    t.string   "data_text"
+    t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,6 +104,15 @@ ActiveRecord::Schema.define(version: 20201027163001) do
     t.string   "author_name"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "sign_ins", force: :cascade do |t|
+    t.string   "title"
+    t.string   "string"
+    t.string   "web_data"
+    t.string   "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "specialties", force: :cascade do |t|

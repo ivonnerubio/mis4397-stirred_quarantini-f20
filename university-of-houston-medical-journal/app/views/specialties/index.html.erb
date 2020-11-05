@@ -7,8 +7,8 @@
  
   <div class="row">
       <% @specialties.each do |specialty| %>
-    <div class="card boarder col-6" style="width: 5rem;">
-    <img src= "https://www.northcountryhospital.org/wp-content/uploads/2019/04/C-Cardiology-newport-vermont-e1554726152791.png" style="width:500px;height:300px;class="card-img-top">
+    <div class="card boarder col-4" style="width: 20rem;">
+    <img src= <%= specialty.text %> style="width:350px;height:200px;class="card-img-top">
     <div class="card-body">
       <h5 class="card-title"><%= specialty.category_title %></h5>
       <p class="card-text"><%= specialty.category_description %></p>

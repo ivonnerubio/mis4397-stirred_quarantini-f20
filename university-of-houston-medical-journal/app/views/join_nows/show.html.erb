@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @join_now.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @join_now.string %>
+</p>
+
+<p>
+  <strong>Data text:</strong>
+  <%= @join_now.data_text %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @join_now.text %>
+</p>
+
+<%= link_to 'Edit', edit_join_now_path(@join_now) %> |
+<%= link_to 'Back', join_nows_path %>
