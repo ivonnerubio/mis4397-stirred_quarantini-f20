@@ -25,3 +25,13 @@ Specialty.create(category_title: category_types[8], category_description: descri
 Specialty.create(category_title: category_types[9], category_description: description[9], text: images[9])
 
 
+# Blog Page
+blog_post_title = ["Blog Post 1", "Blog Post 2", "Blog Post 3", "Blog Post 4", "Blog Post 5"]
+blog_post_text = ["Placeholder text for blog post to come.", "Placeholder text for blog post to come.", "Placeholder text for blog post to come.", "Placeholder text for blog post to come.", "Placeholder text for blog post to come."]
+blog_author_name = ["Maraiah Carrey", "Joe Smith", "Jane Doe", "Beyonce Knowles", "Selena Gomez"]
+
+Blog.create(post_title: blog_post_title[0], text: blog_post_text[0], author_name: blog_author_name[0], year: Faker::Date.between(from: '2014-09-23', to: '2014-09-25'))
+Blog.create(post_title: blog_post_title[1], text: blog_post_text[1], author_name: blog_author_name[1])
+Blog.create(post_title: blog_post_title[2], text: blog_post_text[2], author_name: blog_author_name[2])
+Blog.create(post_title: blog_post_title[3], text: blog_post_text[3], author_name: blog_author_name[3])
+Blog.create(post_title: blog_post_title[4], text: blog_post_text[4], author_name: blog_author_name[4])
