@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :sign_ins
   resources :join_nows
   resources :research_submissions
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
   resources :abouts
   resources :specifics
   resources :specialties
