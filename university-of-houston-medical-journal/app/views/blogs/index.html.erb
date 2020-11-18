@@ -1,13 +1,15 @@
-<div class="container">
+<div class="container-fluid">
   <p id="notice"><%= notice %></p>
-    <div class="card bg-dark text-white text-center" style="width: 70rem;">
-    <img class="card-img" src="https://cdn.pixabay.com/photo/2014/11/01/17/42/lab-512503_1280.jpg" alt="Card image">
-      <div class="card-img-overlay">
-        <p></p><p></p><p></p><h5 class="card-title" style= "font-size: 60px;">The Cougar Med Blog</h5>
-        <p class="card-text" style= "font-size: 35px;">Leading scientific inquiry</p>
-        <p class="card-text"></p>
-      </div>
+  <div class="row">
+    <div class="card bg-dark text-white text-center" style="width: 100rem;">
+      <img class="card-img" src="https://cdn.pixabay.com/photo/2014/11/01/17/42/lab-512503_1280.jpg" alt="Card image">
+        <div class="card-img-overlay">
+          <p></p><p></p><p></p><h5 class="card-title" style= "font-size: 60px;">The Cougar Med Blog</h5>
+          <p class="card-text" style= "font-size: 35px;">Leading scientific inquiry</p>
+          <p class="card-text"></p>
+        </div>
     </div>
+  </div>
   <%= link_to 'New Blog', new_blog_path %>
 
 <%# I want to include a success alert when new blog posts have been made. How do I do this?

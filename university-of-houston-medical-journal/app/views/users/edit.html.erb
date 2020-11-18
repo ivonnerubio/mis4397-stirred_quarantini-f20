@@ -1,0 +1,104 @@
+<div class="user-edit-page">
+  <div class="actions">
+    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" data-toggle="pill" href="#v-pills-home" role="tab" aria-selected="true">Edit Profile</a>
+      <a class="nav-link" data-toggle="pill">Change Password</a>
+      <a class="nav-link" data-toggle="pill">Authorized Applications</a>
+      <a class="nav-link" data-toggle="pill">Email and SMS</a>
+      <a class="nav-link" data-toggle="pill">Manage Contacts</a>
+      <a class="nav-link" data-toggle="pill">Privacy and Security</a>
+    </div>
+  </div>
+  
+  <div class="details tab-content">
+   
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+      <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+          </div>
+    <% end %>
+      
+        <div class="form-group row">
+            <div class="col-sm-3 col-form-label">
+              <img class="avatar" src="https://instuigram-avatar.jpg">
+            </div>
+            <div class="col-sm-9">
+              <p class="email"><%=current_user.email %></p>
+              <a class="change-photo" href="">Change Profile Photo</a>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :first_name, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :first_name, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :last_name, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :last_name, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :link, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :link, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :introduction, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_area :introduction, class: 'form-control' %>
+            </div>
+        </div>    
+        
+        <div class="form-group row">
+            <%= f.label :email, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :email, class: 'form-control' %>
+            </div>
+        </div>
+  
+        <div class="form-group row">
+            <%= f.label :languages, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :languages, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :current_affiliation, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :current_affiliation, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <%= f.label :interests, class: 'col-sm-3 col-form-label' %>
+            <div class="col-sm-9">
+                <%= f.text_field :interests, class: 'form-control' %>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <%= f.submit "Submit", class: 'btn btn-primary' %>
+            </div>
+        </div>
+
+        <% end %>
+    </div>
+  </div>
+  </div>

@@ -1,12 +1,16 @@
-.body { 
+.body{ 
     margin:0; 
 } 
 
-.navbar
-{
+.navbar{
     background-color: black;
     /* background-color: #8B0000; */
     
+}
+
+
+.container{
+  max-width: 1000px;
 }
 
 .covid{
@@ -15,7 +19,38 @@
 }
 
 #logo{
-    width: 200px;
+    width: 100px;
     
 }
 
+@import "bootstrap";
+@import "font-awesome";
+@import "users";
+
+i.fa{
+    font-size: 22px;
+    color: #fff;
+}
+
+.search-form{
+  input{
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+.footer{
+  font-size: 12px;
+  padding-top: 30px;
+  ul{
+    padding-left: 0;
+    > li{
+      display: inline;
+      padding-right: 15px;
+      color: #003569;
+    }
+  }
+  p{
+    color: #999;
+  }
+}
