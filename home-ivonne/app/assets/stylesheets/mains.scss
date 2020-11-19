@@ -1,3 +1,4 @@
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -17,7 +18,7 @@
   padding: 2px 16px;
 }
 
-ul {
+.inside ul {
   padding: 0;
   margin: 0;
   display: grid;
@@ -27,17 +28,18 @@ ul {
   min-width: 480px;
 }
 
-li.small {
+.inside li.small {
   width: 175px;
   height: 175px;
   background-color: palegreen;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-radius: 50%;
   grid-row: auto / span 1;
   grid-column: auto / span 1;
   margin: 10px 0;
 }
 
-li {
+.inside li {
   display: block;
   padding: 0;
   margin: 0;
@@ -67,3 +69,4 @@ li {
 	text-align:center;
 	padding: 0 15px;
 }
+
