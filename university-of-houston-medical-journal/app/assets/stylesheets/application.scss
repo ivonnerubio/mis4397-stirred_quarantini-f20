@@ -1,3 +1,7 @@
+.container{
+  max-width: 1000px;
+}
+
 .body{ 
     margin:0; 
 } 
@@ -6,11 +10,6 @@
     background-color: black;
     /* background-color: #8B0000; */
     
-}
-
-
-.container{
-  max-width: 1000px;
 }
 
 .covid{
@@ -23,22 +22,22 @@
     
 }
 
-@import "bootstrap";
-@import "font-awesome";
-@import "users";
 
-i.fa{
+.user-section{
+  a{
+    padding-left: 15px;
+  }
+  i.fa{
     font-size: 22px;
-    color: #fff;
+    color: #000000d4;
+  }
 }
-
 .search-form{
   input{
     font-size: 13px;
     text-align: center;
   }
 }
-
 .footer{
   font-size: 12px;
   padding-top: 30px;
@@ -54,3 +53,8 @@ i.fa{
     color: #999;
   }
 }
+
+
+@import "bootstrap";
+@import "font-awesome";
+@import "users";
