@@ -36,15 +36,10 @@
             <a class="nav-link" href="/articles">Articles <span class="sr-only"></span></a>
           </li>
             
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/specialties">Specialties</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/specialties">Specialty 1</a>
-              <a class="dropdown-item" href="/specialties">Specialty 2</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/specialties">Specialty 3</a>
-            </div>
+       <li class="nav-item">
+            <a class="nav-link" href="/specialties">Specialties <span class="sr-only"></span></a>
           </li>
+            
             
           <li class="nav-item">
             <a class="nav-link" href="/blogs">Blog</a>
@@ -56,23 +51,31 @@
         
         </ul>
         
-          <%# Changed mr-auto to m-auto %>
+         <%# Changed mr-auto to m-auto %>
           <div class="m-auto">
             <form class="form-inline search-form">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style = "position:left;">
             </form>
           </div>
-            <%#<li class="nav-item"><a class="nav-link" href="/research_submissions">Submit Research</a></li>%>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="/research_submissions" style="color:white;">Submit Research</a>
+          </li>
+        
+        </ul>
+         
           <div class="user-section">
+            <li class="nav-item">
             <% if user_signed_in? %>         
               <a href="<%= user_path(current_user)%>" class="nav-link">
-                <i class="fa fa-user-circle" style="color:white"></i>
+                <i class="fa fa-user-circle" style="color:white;"></i>
               </a>
             <% else %>
-              <a href="<%= new_user_session_path%>" class="nav-link" style="color:white">
-                <i class="fa fa-sign-in" style="color:white"></i>
+              <a href="<%= new_user_session_path%>" class="nav-link" style="color:white;">
+                <i class="fa fa-sign-in" style="color:white;"></i>
               </a>
             <% end %>
+            </li>
           </div>
       </div>
     </nav>
