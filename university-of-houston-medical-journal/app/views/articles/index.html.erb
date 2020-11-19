@@ -1,71 +1,224 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      <nav id="navbar-article" class="navbar navbar-light bg-light flex-column">
-        <a class="navbar-brand" href="#">NavBar</a>
+      <nav id="navbar-article" class="navbar sticky-top navbar-light bg-light flex-column">
+        <a class="navbar-brand" href="#">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+            </div>
+          </form>
+        </a>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link" href="#item-1">Article Title</a>
-          <nav class="nav nav-pills flex-column">
-            <a class="nav-link ml-3 my-1" href="#item-1-1">Abstract</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-2">Introduction</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-3">Case Presentation</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-4">Discussion</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-5">Conclusions</a>
-            <a class="nav-link ml-3 my-1" href="#item-1-6">References</a>
-          </nav>
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#item-2-1"> ... </a>
-            <a class="dropdown-item" href="#item-2-2"> ... </a>
-          </div>
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Keywords</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#item-2-1"> ... </a>
-            <a class="dropdown-item" href="#item-2-2"> ... </a>
-          </div>
-          </nav>
+          <a class="nav-link" href="#item-1">Name</a>
+          <a class="nav-link" href="#item-2">Quick Info</a>
+          <a class="nav-link" href="#item-3">Reviews</a>
+          <a class="nav-link" href="#item-4">About</a>
+          <a class="nav-link" href="#item-5">In-Network Insurances</a>
+          <a class="nav-link" href="#item-6">Location</a>
+          <a class="nav-link" href="#item-7">Education and Baby</a>
+          <a class="nav-link" href="#item-8">Awards</a>
+          <a class="nav-link" href="#item-9">Reviews</a>
+          <a class="nav-link" href="#item-10">FAQ</a>
         </nav>
       </nav>
     </div>
     <div class="col-8">
+      <div class=profile-section left-container-wrapper></div>
       <div data-spy="scroll" data-target="#navbar-article" data-offset="0">
-        <h4 id="item-1">Article Title</h4>
-        <p>Ex consequat commodo adipisicing exercitation aute excepteur occaecat ullamco duis aliqua id magna ullamco eu. Do aute ipsum ipsum ullamco cillum consectetur ut et aute consectetur labore. Fugiat laborum incididunt tempor eu consequat enim dolore proident. Qui laborum do non excepteur nulla magna eiusmod consectetur in. Aliqua et aliqua officia quis et incididunt voluptate non anim reprehenderit adipisicing dolore ut consequat deserunt mollit dolore. Aliquip nulla enim veniam non fugiat id cupidatat nulla elit cupidatat commodo velit ut eiusmod cupidatat elit dolore.</p>
         
-        <h5 id="item-1-1">Abstract</h5>
-        <p>Amet tempor mollit aliquip pariatur excepteur commodo do ea cillum commodo Lorem et occaecat elit qui et. Aliquip labore ex ex esse voluptate occaecat Lorem ullamco deserunt. Aliqua cillum excepteur irure consequat id quis ea. Sit proident ullamco aute magna pariatur nostrud labore. Reprehenderit aliqua commodo eiusmod aliquip est do duis amet proident magna consectetur consequat eu commodo fugiat non quis. Enim aliquip exercitation ullamco adipisicing voluptate excepteur minim exercitation minim minim commodo adipisicing exercitation officia nisi adipisicing. Anim id duis qui consequat labore adipisicing sint dolor elit cillum anim et fugiat.</p>
         
-        <h5 id="item-1-2">Introduction</h5>
+        
+  <!-- Head Card w/ picture and name and location -->
+  
+      <div class="profile-section">
+        <p id="item-1">
+        <div class="card mb-3" style="max-width: 100%; border: none;">
+          <div class="row no-gutters">
+          <div class="col-md-4">
+          <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" class="card-img" alt="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg">
+          </div>
+          <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Baby Yoda</h5>
+            <p class="card-text">Family Physician, Primary Care Doctor</p>
+            <p class="card-text"><small class="text-muted">Houston, TX</small></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg> In-person visits</li>
+              <li class="list-group-item">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-camera-video" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175l3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
+                </svg> Telehealth</li>
+              </ul>
+          </div>
+          </div>
+          </div>
+        </div>
+        </p>
+      </div><hr>
+      
+    <!-- Quick Information -->
+    
+      <div class="profile-section">
+        <p id="item-2">
+          <div class="row">
+            <div class="col-md-6">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              </svg> Accepting new patients
+              <p class="small ml-3">New patient appointments available</p>
+            </div>
+            <div class="col-md-6">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg> Highly Recommended
+              <p class="small ml-3">100% of pateints gave this doctor 5 stars</p>
+            </div>
+            </div>
+          <div class="row">
+              <div class="col-md-6">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bootstrap-reboot" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 0 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.812 6.812 0 0 0 1.16 8zm5.48-.079V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324h-1.6zm0 3.75V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352h1.141z"/>
+                </svg> Patients often return
+                <p class="small ml-3">More patiens return than local providers</p>
+              </div>
+            <div class="col-md-6">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hourglass-split" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0c0 .701.478 1.236 1.011 1.492A3.5 3.5 0 0 1 11.5 13s-.866-1.299-3-1.48V8.35z"/>
+              </svg> Excellent wait time
+              <p class="small ml-3">96% of patients waited less than 30 minutes</p>
+                
+            </div>
+          </div>
+      </div>
+
+        </p>
+      </div>
+      <hr>
+      
+    <!-- start of rating system -->
+      <div class="profile-section">
+        <h5 id="item-3">Ratings</h5>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 border-right border-md">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 text-center">
+                        <h1 class="rating-num">
+                          4.0
+                        </h1>
+                        <div>
+                          1,050,008 total
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="row rating-desc">
+                            <div class="col-xs-3 col-md-3 text-right">
+                              5
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 5 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                              4
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 4 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                              3
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 3 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                2
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar-striped bg-danger" role="progressbar" aria-valuenow="20"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 2 -->
+                            <div class="col-xs-3 col-md-3 text-right">
+                                1
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="progress">
+                                    <div class="progress-bar-striped bg-danger" role="progressbar" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end 1 -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <img src="https://marketingbitz.com/wp-content/uploads/2018/08/BOOST_GUEST_BLOG_IMAGE_SET_5_FIVE_STAR_REVIEW_BG_1200x628px_v1_1.jpg" class="card-img" style="max-width: 50%;" alt="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg">
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <h5 id="item-4">In-Network Insurances</h5>
         <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
-        
-        <h5 id="item-1-3">Case Presentation</h5>
+      </div>
+      
+      <div class="profile-section">
+        <h5 id="item-5">Location</h5>
         <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
-        
-        <h5 id="item-1-4">Discussion</h5>
+      </div>
+      
+      <div class="profile-section">
+        <h5 id="item-6">Education and Background</h5>
         <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
-        
-        <h5 id="item-1-5">Conclusions</h5>
+      </div>
+      
+      <div class="profile-section">
+        <h5 id="item-7">Awards</h5>
         <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
-        
-        <h5 id="item-1-6">References</h5>
-        <p>Cillum nisi deserunt magna eiusmod qui eiusmod velit voluptate pariatur laborum sunt enim. Irure laboris mollit consequat incididunt sint et culpa culpa incididunt adipisicing magna magna occaecat. Nulla ipsum cillum eiusmod sint elit excepteur ea labore enim consectetur in labore anim. Proident ullamco ipsum esse elit ut Lorem eiusmod dolor et eiusmod. Anim occaecat nulla in non consequat eiusmod velit incididunt.</p>
-        
-        <h4 id="item-2">Quick Look</h4>
+      </div>
+      
+      <div class="profile-section">
+        <h4 id="item-8">Reviews</h4>
         <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat mollit culpa irure ullamco est ex ullamco excepteur.</p>
-        
-        <h5 id="item-2-1">Categories</h5>
+      </div>
+      
+      <div class="profile-section">
+        <h5 id="item-9">FAQ</h5>
         <p>Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam laboris ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat exercitation. Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure proident ipsum esse qui.</p>
-        
-        <h5 id="item-2-2">Keywords</h5>
-        <p>Labore sit culpa commodo elit adipisicing sit aliquip elit proident voluptate minim mollit nostrud aute reprehenderit do. Mollit excepteur eu Lorem ipsum anim commodo sint labore Lorem in exercitation velit incididunt. Occaecat consectetur nisi in occaecat proident minim enim sunt reprehenderit exercitation cupidatat et do officia. Aliquip consequat ad labore labore mollit ut amet. Sit pariatur tempor proident in veniam culpa aliqua excepteur elit magna fugiat eiusmod amet officia.</p>
-     
+      </div>  
+      <div class="profile-section">
+        <h5 id="item-10">FAQ</h5>
+        <p>Deserunt quis elit Lorem eiusmod amet enim enim amet minim Lorem proident nostrud. Ea id dolore anim exercitation aute fugiat labore voluptate cillum do laboris labore. Ex velit exercitation nisi enim labore reprehenderit labore nostrud ut ut. Esse officia sunt duis aliquip ullamco tempor eiusmod deserunt irure nostrud irure. Ullamco proident veniam laboris ea consectetur magna sunt ex exercitation aliquip minim enim culpa occaecat exercitation. Est tempor excepteur aliquip laborum consequat do deserunt laborum esse eiusmod irure proident ipsum esse qui.</p>
+      </div>  
       </div>
     </div>
   </div>
 </div>
-
-$('document').scrollspy({ target: '#navbar-article' })
-
-$('[data-spy="scroll"]').each(function () {
-  var $spy = $(this).scrollspy('refresh')
-})
