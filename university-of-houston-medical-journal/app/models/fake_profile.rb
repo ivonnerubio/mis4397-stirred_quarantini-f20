@@ -1,0 +1,2 @@
+class FakeProfile < ApplicationRecord
+end

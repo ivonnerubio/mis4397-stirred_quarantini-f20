@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :medical_students
+  resources :fake_profiles
   devise_for :users
   resources :sign_ins
   resources :join_nows

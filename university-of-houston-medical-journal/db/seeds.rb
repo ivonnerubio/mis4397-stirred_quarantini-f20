@@ -38,3 +38,4 @@ Blog.create(post_title: blog_post_title[1], text: blog_post_text[1], author_name
 Blog.create(post_title: blog_post_title[2], text: blog_post_text[2], author_name: blog_author_name[2], year: blog_year[2], post_type: blog_post_type[2], comment_section: blog_post_comments[2])
 Blog.create(post_title: blog_post_title[3], text: blog_post_text[3], author_name: blog_author_name[3], year: blog_year[3], post_type: blog_post_type[3], comment_section: blog_post_comments[3])
 Blog.create(post_title: blog_post_title[4], text: blog_post_text[4], author_name: blog_author_name[4], year: blog_year[4], post_type: blog_post_type[4], comment_section: blog_post_comments[4])
+
