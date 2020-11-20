@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @medical_student.name %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @medical_student.education %>
+</p>
+
+<p>
+  <strong>Background:</strong>
+  <%= @medical_student.background %>
+</p>
+
+<p>
+  <strong>Award:</strong>
+  <%= @medical_student.award %>
+</p>
+
+<p>
+  <strong>Certification:</strong>
+  <%= @medical_student.certification %>
+</p>
+
+<%= link_to 'Edit', edit_medical_student_path(@medical_student) %> |
+<%= link_to 'Back', medical_students_path %>

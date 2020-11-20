@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fake Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Education</th>
+      <th>Background</th>
+      <th>Award</th>
+      <th>Certification</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fake_profiles.each do |fake_profile| %>
+      <tr>
+        <td><%= fake_profile.name %></td>
+        <td><%= fake_profile.education %></td>
+        <td><%= fake_profile.background %></td>
+        <td><%= fake_profile.award %></td>
+        <td><%= fake_profile.certification %></td>
+        <td><%= link_to 'Show', fake_profile %></td>
+        <td><%= link_to 'Edit', edit_fake_profile_path(fake_profile) %></td>
+        <td><%= link_to 'Destroy', fake_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fake Profile', new_fake_profile_path %>

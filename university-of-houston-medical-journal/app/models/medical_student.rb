@@ -1,0 +1,2 @@
+class MedicalStudent < ApplicationRecord
+end
