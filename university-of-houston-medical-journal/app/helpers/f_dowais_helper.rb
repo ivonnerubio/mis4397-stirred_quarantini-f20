@@ -1,0 +1,2 @@
+module FDowaisHelper
+end

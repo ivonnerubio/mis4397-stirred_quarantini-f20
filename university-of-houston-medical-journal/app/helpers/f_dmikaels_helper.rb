@@ -1,0 +1,2 @@
+module FDmikaelsHelper
+end

@@ -1,0 +1,2 @@
+class FDhalle < ApplicationRecord
+end

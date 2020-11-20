@@ -1,0 +1,2 @@
+class FDalexi < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class FDevelyn < ApplicationRecord
+end

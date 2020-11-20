@@ -1,0 +1,2 @@
+class FDowai < ApplicationRecord
+end

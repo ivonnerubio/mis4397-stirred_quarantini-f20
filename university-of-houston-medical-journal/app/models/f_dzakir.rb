@@ -1,0 +1,2 @@
+class FDzakir < ApplicationRecord
+end

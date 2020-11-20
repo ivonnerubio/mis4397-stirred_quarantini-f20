@@ -1,0 +1,2 @@
+class FDcarrie < ApplicationRecord
+end

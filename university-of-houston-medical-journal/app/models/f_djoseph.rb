@@ -1,0 +1,2 @@
+class FDjoseph < ApplicationRecord
+end
