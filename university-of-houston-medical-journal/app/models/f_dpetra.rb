@@ -1,0 +1,2 @@
+class FDpetra < ApplicationRecord
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201118005446) do
+ActiveRecord::Schema.define(version: 20201120033833) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "title"
@@ -81,6 +81,66 @@ ActiveRecord::Schema.define(version: 20201118005446) do
     t.index ["blog_id"], name: "index_comments_on_blog_id"
   end
 
+  create_table "f_dalexis", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dcarries", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_develyns", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dhalles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_djosephs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dmikaels", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dowais", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dpetras", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_droberts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_dzakirs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fake_profiles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "education"
+    t.text     "background"
+    t.text     "award"
+    t.text     "certification"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "title"
     t.string   "categories"
@@ -99,6 +159,16 @@ ActiveRecord::Schema.define(version: 20201118005446) do
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "medical_students", force: :cascade do |t|
+    t.string   "name"
+    t.string   "education"
+    t.text     "background"
+    t.text     "award"
+    t.text     "certification"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "research_submissions", force: :cascade do |t|

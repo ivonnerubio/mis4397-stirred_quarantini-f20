@@ -1,0 +1,2 @@
+class FDmikael < ApplicationRecord
+end

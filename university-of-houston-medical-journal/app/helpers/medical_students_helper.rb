@@ -1,0 +1,2 @@
+module MedicalStudentsHelper
+end
