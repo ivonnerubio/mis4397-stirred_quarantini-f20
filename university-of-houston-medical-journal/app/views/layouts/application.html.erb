@@ -33,13 +33,15 @@
         <ul class="navbar-nav mr-auto">
         
           <li class="nav-item">
-            <a class="nav-link" href="/articles">Articles <span class="sr-only"></span></a>
+            <a class="nav-link" href="/articles">Profile Template <span class="sr-only"></span></a>
           </li>
             
        <li class="nav-item">
             <a class="nav-link" href="/specialties">Specialties <span class="sr-only"></span></a>
           </li>
-            
+        <li class="nav-item">
+            <a class="nav-link" href="/medical_students">Medical Students <span class="sr-only"></span></a>
+          </li>    
             
           <li class="nav-item">
             <a class="nav-link" href="/blogs">Blog</a>
@@ -48,18 +50,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/abouts">About</a>
           </li>
-        
-        </ul>
-        
-         <%# Changed mr-auto to m-auto %>
+
           <div class="m-auto">
             <form class="form-inline search-form">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style = "position:left;">
             </form>
           </div>
-         
-          <div class="user-section">
-            <li class="nav-item">
+          
+          <li class="nav-item">
             <% if user_signed_in? %>         
               <a href="<%= user_path(current_user)%>" class="nav-link">
                 <i class="fa fa-user-circle" style="color:white;"></i>
@@ -69,8 +67,15 @@
                 <i class="fa fa-sign-in" style="color:white;"></i>
               </a>
             <% end %>
-            </li>
-          </div>
+          </li>
+        </ul>
+        
+         <%# Changed mr-auto to m-auto %>
+
+         
+          <!--<div class="user-section">-->
+            
+          <!--</div>-->
       </div>
     </nav>
 
@@ -98,6 +103,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <<<<<<< HEAD
   <script type="text/javascript" src="js/materialize.min.js"></script>
+=======
+>>>>>>> 0889dd0286c42032494dcbf9b8628433800af9ca
 
   <!--Footer-->
   <footer class="container-fluid footer">
@@ -135,7 +142,4 @@
     </footer>
     
   </body>
-=======
-</body>
->>>>>>> 62b1bc5402e7245dd0e6d8367141b480d0c15e8c
 </html>
