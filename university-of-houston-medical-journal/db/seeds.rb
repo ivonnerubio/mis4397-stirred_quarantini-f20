@@ -33,9 +33,20 @@ blog_post_type = ["Opinion", "News", "Editorial", "Opinion", "Art"]
 blog_post_comments = ["Leave a comment", "Leave a comment", "Leave a comment", "Leave a comment", "Leave a comment"]
 blog_year = ["October 17,2020", "August 24, 2020", "July 8, 2020", "June 1, 2020", "May 23, 2020"]
 
-Blog.create(post_title: blog_post_title[0], text: blog_post_text[0], author_name: blog_author_name[0], year: blog_year[0], post_type: blog_post_type[0], comment_section: blog_post_comments[0])
-Blog.create(post_title: blog_post_title[1], text: blog_post_text[1], author_name: blog_author_name[1], year: blog_year[1], post_type: blog_post_type[1], comment_section: blog_post_comments[1])
-Blog.create(post_title: blog_post_title[2], text: blog_post_text[2], author_name: blog_author_name[2], year: blog_year[2], post_type: blog_post_type[2], comment_section: blog_post_comments[2])
-Blog.create(post_title: blog_post_title[3], text: blog_post_text[3], author_name: blog_author_name[3], year: blog_year[3], post_type: blog_post_type[3], comment_section: blog_post_comments[3])
-Blog.create(post_title: blog_post_title[4], text: blog_post_text[4], author_name: blog_author_name[4], year: blog_year[4], post_type: blog_post_type[4], comment_section: blog_post_comments[4])
+Blog.create(post_title: "First Post", text: "Test Placeholder", author_name: "test name", year: "test year", post_type: "Test type", comment_section: "Test Leave comments")
+# Blog.create(post_title: blog_post_title[0], text: blog_post_text[0], author_name: blog_author_name[0], year: blog_year[0], post_type: blog_post_type[0], comment_section: blog_post_comments[0])
+# Blog.create(post_title: blog_post_title[1], text: blog_post_text[1], author_name: blog_author_name[1], year: blog_year[1], post_type: blog_post_type[1], comment_section: blog_post_comments[1])
+# Blog.create(post_title: blog_post_title[2], text: blog_post_text[2], author_name: blog_author_name[2], year: blog_year[2], post_type: blog_post_type[2], comment_section: blog_post_comments[2])
+# Blog.create(post_title: blog_post_title[3], text: blog_post_text[3], author_name: blog_author_name[3], year: blog_year[3], post_type: blog_post_type[3], comment_section: blog_post_comments[3])
+# Blog.create(post_title: blog_post_title[4], text: blog_post_text[4], author_name: blog_author_name[4], year: blog_year[4], post_type: blog_post_type[4], comment_section: blog_post_comments[4])
 
+Blog.all
+5.times do |i|
+    Blog.create(
+        post_title: blog_post_title[0], 
+        text: blog_post_text[0], 
+        author_name: blog_author_name[0], 
+        year: blog_year[0], 
+        post_type: blog_post_type[0], 
+        comment_section: blog_post_comments[0])
+    end

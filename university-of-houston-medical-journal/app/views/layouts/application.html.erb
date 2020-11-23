@@ -57,17 +57,36 @@
             </form>
           </div>
           
-          <li class="nav-item">
-            <% if user_signed_in? %>         
-              <a href="<%= user_path(current_user)%>" class="nav-link">
-                <i class="fa fa-user-circle" style="color:white;"></i>
-              </a>
+          <li class="navbar right">
+          <% if user_signed_in? %> 
+            <%#li class="nav-item">
+              <%#a href="<%= user_path(current_user)%><%#" class="nav-link">My Profile %>
+                <%#<i class="fa fa-user-circle" style="color:white;"></i>%>
+              <%#/a><%>
+            <%#/li><%>
+              <%#= button_to "logout", destroy_user_session_path, method: :delete %>
+              <li class="nav-item">
+                <%= link_to('Sign Out', destroy_user_session_path, method: :delete) %>        
+              </li>
             <% else %>
-              <a href="<%= new_user_session_path%>" class="nav-link" style="color:white;">
-                <i class="fa fa-sign-in" style="color:white;"></i>
-              </a>
+              <li class="nav-item">
+                <%= link_to('Sign In', new_user_session_path) %>  
+              </li>
             <% end %>
+            
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to('Edit registration', edit_user_registration_path) %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('Register', new_user_registration_path) %>
+              </li>
+          <% end %>
           </li>
+
+            
+            
         </ul>
         
          <%# Changed mr-auto to m-auto %>
@@ -90,8 +109,12 @@
   </div>
 
   <!-- DEVISE DO NOT DELETE -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     
   <!--Main content-->
     <main class="container-fluid" style="min-height: 500px;">

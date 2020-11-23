@@ -1,51 +1,86 @@
+  <div class="row">
+    <div class="card bg-dark text-white text-center" style="width: 100rem; height: 37rem; border-radius: 0%; object-fit: cover; object-fit: center;">
+      <img class="card-img" src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" style="width: 100rem; height: 38rem;">
+        <div class="card-img-overlay">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <h5 class="card-title" style= "font-size: 90px;">MedStud Blog</h5>
+          <p class="card-text" style= "font-size: 50px;">Leading scientific inquiry</p>
+          <p class="card-text"></p>
+        </div>
+    </div>
+  </div><%# I want to include a success alert when new blog posts have been made. How do I do this?
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div> %>
+<br></br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <nav id="navbar-article" class="navbar sticky-top navbar-light bg-light flex-column">
+        <a class="navbar-brand" href="#">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+            </div><p></p>
+          </form>
+        </a>
+        <nav class="nav nav-pills flex-column">
+          <h3>MedStud</h3>
+          <a class="nav-link" href="#item-1"><%= link_to 'Back to the blog', blogs_path %></a>
+          
+          <p></p><h3>Twitter</h3> 
+          <!--Username: @MedStud_Media Password: Medstud1!-->
+          <a class="nav-link" href="https://twitter.com/MedStud_Media">Follow us on Twitter!</a>
+          
+          
+        </nav>
+      </nav>
+    </div>
+    <div class="col-8">
+      <div class=profile-section left-container-wrapper></div>
+      <div data-spy="scroll" data-target="#navbar-article" data-offset="0">
+        
+      <div class="profile-section">
+          <div class="col">
+            <div class="card mb-3 bg-light" style ="max-width: 100rem;">
+              <h1><%= @blog.post_title %></h1><br></br>
+              <p class="card-text text-muted"><%= @blog.author_name %> | <%= @blog.year %> | <%= @blog.post_type %> <%= @blog.comment_section %></p>
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/paramedics-taking-patient-on-stretcher-from-ambulance-to-hospital-picture-id1128171354?k=6&m=1128171354&s=612x612&w=0&h=bNUpk1ilAjRVbjxpdwV1eY4SM7cipND-Tb2pmhdBvwE=" alt="Card image cap" style= "max-width: 100rem; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"><%= @blog.text %></p>
+
+                </div>
+            </div>
+          </div>
+        <br><br>
+        <h2>Share your thoughts on this blog post!</h2>
+           <div id="comments">
+             <%# Expands to render partial: 'comments/comment', collection: @post.comments %>
+             <%= render @blog.comments %>
+            </div>
+            
+            <%= render 'comments/new', blog: @blog %>
+              </div>
+    
+      </div>
+    </div>
+  </div>
+</div>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Post title:</strong>
-  <%= @blog.post_title %>
-</p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @blog.text %>
-</p>
+  <!--<strong>Authorid:</strong>-->
+  <%#= @blog.authorID %>
 
-<p>
-  <strong>Year:</strong>
-  <%= @blog.year %>
-</p>
-
-<p>
-  <strong>Author name:</strong>
-  <%= @blog.author_name %>
-</p>
-
-<p>
-  <strong>Authorid:</strong>
-  <%= @blog.authorID %>
-</p>
-
-<p>
-  <strong>Post type:</strong>
-  <%= @blog.post_type %>
-</p>
-
-<p>
-  <strong>Leave a comment</strong>
-  <%#<button type="button" class="btn btn-link">Link</button> %>
-  <%= @blog.comment_section %>
-</p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
 
- <br><br>
- 
- <h2>Comments</h2>
-   <div id="comments">
-     <%# Expands to render partial: 'comments/comment', collection: @post.comments %>
-     <%= render @blog.comments %>
-    </div>
-    
-    <%= render 'comments/new', blog: @blog %>
+
+
    </div>

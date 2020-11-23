@@ -10,9 +10,13 @@ Rails.application.routes.draw do
   resources :f_dhalles
   resources :f_dmikaels
   resources :medical_students
+  
   devise_for :users
+  resources :users, only: [:show, :edit, :update, :index]
+  # root "users#index"
   resources :sign_ins
   resources :join_nows
+  
   resources :research_submissions
   resources :blogs do
     resources :comments
@@ -22,7 +26,7 @@ Rails.application.routes.draw do
   resources :specialties
   resources :articles
   resources :homes
-  resources :users, only: [:show, :edit, :update]
+  
 
   get 'home/index'
   root to: "homes#index"
