@@ -1,5 +1,11 @@
 <head>
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+ <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class = "toptop">
+ <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -7,7 +13,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://he.utexas.edu/images/easyblog_articles/243/GettyImages-823767128_high.jpg" class="d-block w-100" style="height:500px" >
+      <img src="https://info.cell.com/hubfs/CP20313_Med_eTOC_1024x342.jpg" class="d-block w-100" style="height:500px" >
       <div class="carousel-caption d-none d-md-block">
         <!--<h5 style="float:left">MedStud</h5><br>-->
         <!--<p style="float:left">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
@@ -37,32 +43,36 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+ 
+ 
+ 
+</div>
+
+
 </head>
 
-<body style="background-image: url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");">
+<body style="background-image: url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");" >
 
- <div class = "top">
- <h1 style="font-family:Georgia, serif; margin-top:15px;text-shadow: 1px 1px 2px #000000;">Find Students in your medical network</h1>
+ <div class = "head-top">
+ <h1 style="font-family:Georgia, serif; margin-top:15px;text-shadow: 1px 1px 2px #000000;" style = "background-color: #fbf7f5;">Find Students in your medical network</h1>
  <br><br>
  <div class = "search">
  <form>
  <input id = "category" type="text" name="search" placeholder="condition, procedure, student name">
  <input id = "zip" type="text" name="search" placeholder="zip code or city">
  <input id = "date" type="date" name="search" placeholder="date">
- <input id = "date" type="date" name="search" placeholder="date">
- <button type="submit">Search</button>
+ <button id = "button-search" type="button" class="btn btn-warning">Submit</button>
  </form>
  </div>
 
-
 </div>
 
-<br><br>
+
 
 <!--/.Carousel Wrapper-->
 <div class = "member-spotlight">
 
- <h4 class=header style="font-family:Georgia, serif;font-size:xx-large;text-shadow: 1px 1px 2px #000000;background: #B0E0E6;">Member Spotlight</h4>
+ <h4 id = "header-text" class=header style="font-family:Georgia, serif; color:black;font-size:40px;text-shadow: 1px 1px 2px #000000;padding-left:10px;padding-bottom:0px">Member Spotlight</h4>
  
  <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -208,22 +218,25 @@
         
        </div> 
   </div>
-  
+  </div>
+ </div>
 </div>
 <style>
   .img-fluid{
       display: inline-block;
         width: 100px;
         height: 100px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         border-radius: 50%;
-      
+        padding-left: 5px;
         object-fit: cover;
         object-fit: center;
   }
   .card{
     font-family: Georgia, serif ;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       Add shadows to create the "card" effect 
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       width: 320px;
       height: 150px;
@@ -244,10 +257,12 @@
   }
   .school{
    font-size:12px;
+   
   }
   p{
     padding:0;
     margin:0;
+    
   }
   
    .card:hover {
@@ -257,6 +272,7 @@
   padding: 20px;
   text-align: left;
   color: white;
+  
   font-size: 30px;
 }
 </style>
@@ -264,13 +280,9 @@
 
 
 
+<div class = 'specialties' style = "background-color: #fbf7f5;">
+ <h1 class= "header" style="font-family:Georgia, serif; margin-top:15px;text-shadow: 1px 1px 2px #000000;">Top specialties on our network</h1>
 
-
-
-
-
-<div class = 'specialties'>
- <h3 class= header style="font-family:Georgia, serif;font-size:xx-large;text-shadow: 1px 1px 2px #000000;background: #B0E0E6;">Top specialties on our network:</h3>
  <div class = "inside">
  <ul>
  <li class="small1"><a href = "#"><p class="circle"><span>Primary Care</span></p></a></li>
@@ -278,7 +290,6 @@
  <li class="small3"><a href = "#"><p class="circle"><span>Dentist</span></p></a></li>
  <li class="small4"><a href = "#"><p class="circle"><span>Dermatologist</span></p></a></li>
  <li class="small5"><a href = "#"><p class="circle"><span>Psychiastrist</span></p></a></li>
- <li class="small6"><a href="#"><p class="circle"><span>Eye Doctor</span></p></a></li>
  </ul>
  <ul>
  <li class="small6"><a href="#"><p class="circle"><span>Eye Doctor</span></p></a></li>
@@ -291,41 +302,249 @@
  </div>
 
 </div>
-<br><br>
+
 <div class = "signup">
- <h1>Are you a five-star research student?</h1>
+ <h1 style="font-size:50px;"><b>Are you a five-star research student?</b></h1>
  <h2>List your publications to reach millions of collegues.</h2>
  <ul>
  <li><p>Attract and engage new collegues</p></li>
  <li><p>Build and strengthen your online reputation</p></li>
  <li><p>Deliver a premium researchers patients love</p></li>
  </ul>
- <button class="w3-button w3-block` " id = "signup-button">Publish your work on our site! </button>
+ <br>
+ <button class="button" id = "signup-button">Publish your work on our site! </button>
 </div>
 
 <div class = "citys">
- <h1>Find students and collegues by city</h1>
- <div claa="demo">
-<div class="dropdown">
- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
- <span class="caret"></span></button>
- <ul class="dropdown-menu">
- <li><a href="#">New York</a></li>
- <li><a href="#">Chicago</a></li>
- <li><a href="#">HOUSTON!</a></li>
- </ul>
+  <h1><b>Find students and collegues by city</b></h1>
+ <div class="row">
+<div class="col-6"> 
+ <div class = "east">
+   <h2><i><b>East</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Maine</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">New Hampshire</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Vermont</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">New York</a></h4>
+ </div>
+ <div class = "west">
+   <h2><i><b>West</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Alaska</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">California</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Hawaii</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Idaho</a></h4>
+ </div>
+ </div>
+ <div class="col-6"> 
+ <div class = "east">
+   <h2><i><b>East</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Maine</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">New Hampshire</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Vermont</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">New York</a></h4>
+ </div>
+ <div class = "west">
+   <h2><i><b>West</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Alaska</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">California</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Hawaii</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Idaho</a></h4>
+ </div>
+ </div>
+ </div>
 </div>
+<div class="social_media" style="margin-top:0px;padding-top:0px;background-color:#E5E7E9;height:600px">
+ 
+ <div id="social-platforms">
+<h10>Stay connected with your peers</h10><br><br>
+
+<a class="btn btn-icon btn-facebook" href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+<a class="btn btn-icon btn-twitter" href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+<a class="btn btn-icon btn-googleplus" href="#"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+<a class="btn btn-icon btn-pinterest" href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+<a class="btn btn-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+
+
+</div>
+<div class= "bottom-pic" style="position: relative;top: 0px;left: 800px;bottom:0px;">
+ <img id = "bot-pic" src = "https://www.vitaparkeye.com/UserFiles/doctorsunited_2.jpg">
 </div>
 </div>
 
-
+</div>
+</div>
 
 </body>
 
 <Style>
-  .specialties{
- position: relative;
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+/*Ignore me, I'm just page styling*/
+body {
+  background: #ffffff;
+  background: -moz-linear-gradient(-45deg, #ffffff 0%, #ffffff 50%, #F2F2F2 50%, #F2F2F2 50%, #F2F2F2 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(50%,#ffffff), color-stop(50%,#F2F2F2), color-stop(50%,#F2F2F2), color-stop(100%,#F2F2F2));
+  background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
+  background: -o-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
+  background: -ms-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
+  background: linear-gradient(135deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
 }
+
+h10 {font-size:1.5em;}
+
+#social-platforms {
+  position:relative;
+  font-size:1rem;
+  text-align:center;
+  height:120px;
+  overflow:hidden;
+  ont-family: 'Roboto',sans-serif;
+  font-size:10px;
+  top: 100px;
+  right: 300px;"
+}
+
+/*Pen code from this point on*/
+.btn {
+  clear:both;
+  white-space:nowrap;
+  font-size:.8em;
+  display:inline-block;
+  border-radius:5px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  margin:2px;
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  transition:all .5s;
+  overflow:hidden
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+}
+
+.btn:focus {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn > span,.btn-icon > i {
+  float:left;
+  padding:13px;
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  transition:all .5s;
+  line-height:1em
+}
+
+.btn > span {
+  padding:14px 18px 16px;
+  white-space:nowrap;
+  color:#FFF;
+  background:#b8b8b8
+}
+
+.btn:focus > span {
+  background:#9a9a9a
+}
+
+.btn-icon > i {
+  border-radius:5px 0 0 5px;
+  position:relative;
+  width:13px;
+  text-align:center;
+  font-size:1.25em;
+  color:#fff;
+  background:#212121
+}
+
+.btn-icon > i:after {
+  content:"";
+  border:8px solid;
+  border-color:transparent transparent transparent #222;
+  position:absolute;
+  top:13px;
+  right:-15px
+}
+
+.btn-icon:hover > i,.btn-icon:focus > i {
+  color:#FFF
+}
+
+.btn-icon > span {
+  border-radius:0 5px 5px 0
+}
+
+/*Facebook*/
+.btn-facebook:hover > i,.btn-facebook:focus > i {
+  color:#3b5998
+}
+
+.btn-facebook > span {
+  background:#3b5998
+}
+
+/*Twitter*/
+.btn-twitter:hover > i,.btn-twitter:focus > i {
+  color:#55acee
+}
+
+.btn-twitter > span {
+  background:#55acee
+}
+
+/*Google*/
+.btn-googleplus:hover > i,.btn-googleplus:focus > i {
+  color:#dd4b39
+}
+
+.btn-googleplus > span {
+  background:#dd4b39
+}
+
+/*Pinterest*/
+.btn-pinterest:hover > i,.btn-pinterest:focus > i {
+  color:#cb2028
+}
+
+.btn-pinterest > span {
+  background:#cb2028
+}
+
+/*LinkedIn*/
+.btn-linkedin:hover > i,.btn-linkedin:focus > i {
+  color:#007bb6
+}
+
+.btn-linkedin > span {
+  background:#007bb6
+}
+
+
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+  .specialties{
+ 
+ padding-bottom: 130px;
+}
+
+ .specialties h1{
+ font-size: 50px;
+ padding-top: 0px;
+ margin-left: 40px;
+ color: black;
+ text-align: center;
+
+}
+}
+
 .body{
  background-image: url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");
 }
@@ -335,8 +554,10 @@
  display: grid;
  grid-template-rows: repeat(auto-fill, 220px);
  grid-template-columns: repeat(auto-fill, 220px);
- grid-gap: 10px;
+ grid-gap: 5px;
  min-width: 480px;
+ padding-left:170px;
+ padding-top:50px;
 }
 
 .inside li.small1 {
@@ -450,8 +671,6 @@
  margin: 10px 0;
 }
 
-
-
 .inside li {
  display: block;
  padding: 0;
@@ -473,6 +692,7 @@
 	width: auto;
 	margin:0 auto;
 }
+
 .circle span {
 	display: table-cell;
 	vertical-align: middle;
@@ -488,86 +708,191 @@
 }
 
 
+.head-top{
+ background-color: #fbf7f5;
+ padding-top: 50px;
+ position: relative;
+ top: -100px;
+ height: 400px;
+}
+.head-top h1{
+ font-size: 50px;
+ padding-left: 15px;
+ padding-top: 50px;
+ color: black;
+
+}
+
+
+.search{
+ padding-left: 240px;
+ padding-top: 30px;
+ padding-bottom: 100px;
+}
+
+.toptop{
+ position: relative;
+ top: -95px;
+}
+
+input[type=text] {padding:5px; border:2px solid #ccc; 
+-webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type=text]:focus {border-color:#333; }
+
+input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+
+input[type=date] {padding:5px 15px; background:#ccc; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
 
 
 
 
+.submit{
+ background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
 
 
-/*.member-spotlight{*/
-
-/*}*/
-
-
-/*.card{*/
-/* margin-right: 20px;*/
-/* height: 160px;*/
-/*}*/
-
-/*#pic {*/
-/* border-radius: 50%;*/
-/* width: 25%;*/
+#category {
+ height: 50px;
+ width: 450px;
+ font-size: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ 
+}
 
 
-/*}*/
+#zip{
+  height: 50px;
+ width: 230px;
+ font-size: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-/*.text-header{*/
-/* position: relative;*/
-/* top: -100px;*/
-/* left: 100px;*/
-/* text-align: left;*/
+#date{
+  height: 50px;
+ width: 250px;
+ font-size: 21px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-
-/*}*/
-
-/*.text-header h4{*/
-/* position: relative;*/
-/* top: -13px;*/
-/* text-align: left;*/
-/* bold: none;*/
-
-
-/*}*/
-/*.text-header p{*/
-/* position: relative;*/
-/* top: -47px;*/
-/* left: -33px;*/
-/* text-align: left;*/
-/*}*/
-
-/*.text-body{*/
-/* position: relative;*/
-/* top: -130px;*/
-/*}*/
-/*.text-body a{*/
-/* position: relative;*/
-/* top: -30px;*/
-/* left: 90px;*/
-/* color: black;*/
-/*}*/
+#button-search{
+ font-size: 24px;
+ position: relative;
+ top: -5px;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 
+#mid-picture{
+ width: 50%;
+}
 
 
+.mid-pic h1{
+ position: relative;
+ top: -120px;
+ color: red;
+}
+
+
+.member-spotlight{
+ color: gray;
+ box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+}
+
+
+#bot-pic{
+  width: 50%;
+}
+
+
+
+.signup{
+ background-color: #D98880;
+ color: white;
+ height: 400px;
+  text-align: center;
+}
+
+.signup h2{
+ padding-top: 5px;
+
+ font-size: 30px;
+
+}
 .signup h1{
- font-size: 40px;
+ padding-top: 35px;
+ font-size: 50px;
+
 }
 .signup ul{
+ position: relative;
+ list-style-type: none;
+
  font-size: 18px;
 }
 
 .signup p{
- font-size: 18px;
+
+ font-size: 20px;
 }
 
 #signup-button{
- width: 200px;
+ width: 400px;
  padding: 10px;
+ top: 200px;
+ left: 200px;
  color: black;
  background-color: yellow;
  border: none;
+ box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+ transition: box-shadow 0.3s ease-in-out;
 }
   
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.east{
+ padding-left: 30px;
+}
+
+.west{
+ padding-left: 30px;
+}
+
+
 </Style>
 
 
