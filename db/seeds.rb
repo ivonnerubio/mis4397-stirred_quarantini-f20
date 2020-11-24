@@ -48,7 +48,8 @@ Blog.all
         year: blog_year[0], 
         post_type: blog_post_type[0], 
         comment_section: blog_post_comments[0])
-    end
+end
+
     
 # 5.times do |i|
 #     Blog.create(
