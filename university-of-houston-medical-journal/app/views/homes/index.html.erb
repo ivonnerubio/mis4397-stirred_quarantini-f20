@@ -316,8 +316,8 @@
 </div>
 
 <div class = "citys">
-  <h1><b>Find students and collegues by city</b></h1>
- <div class="row">
+  <h1><b>Find Students and Collegues by State</b></h1>
+ <div class="row" style="padding-left:250px;padding-bottom:70px;">
 <div class="col-6"> 
  <div class = "east">
    <h2><i><b>East</b></i></h2>
@@ -335,38 +335,43 @@
  </div>
  </div>
  <div class="col-6"> 
- <div class = "east">
-   <h2><i><b>East</b></i></h2>
-   <h4 style="padding-left:40px;"><a href = "#">Maine</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">New Hampshire</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">Vermont</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">New York</a></h4>
+ <div class = "north">
+   <h2><i><b>North</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Wisconsin</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">North Dakota</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Montana</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Nebraska</a></h4>
  </div>
- <div class = "west">
-   <h2><i><b>West</b></i></h2>
-   <h4 style="padding-left:40px;"><a href = "#">Alaska</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">California</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">Hawaii</a></h4>
-   <h4 style="padding-left:40px;"><a href = "#">Idaho</a></h4>
+ <div class = "south">
+   <h2><i><b>South</b></i></h2>
+   <h4 style="padding-left:40px;"><a href = "#">Texas</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Oklahoma</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Colorado</a></h4>
+   <h4 style="padding-left:40px;"><a href = "#">Arkansas</a></h4>
  </div>
  </div>
  </div>
 </div>
-<div class="social_media" style="margin-top:0px;padding-top:0px;background-color:#E5E7E9;height:600px">
+<div class="banner" >
+ <!--style="margin-top:0px;padding-top:0px;background-color:#E5E7E9;height:600px"-->
+ <p class="h1 display-4" style="font-family:Georgia, serif; font-size:70px;margin-top:110px; padding-bottom:0px;text-shadow: 1px 1px 2px #000000;">Stay Connected with Your Peers</p>
  
- <div id="social-platforms">
-<h10>Stay connected with your peers</h10><br><br>
-
+ <div id="social-platforms"><br><br>
+ 
+<div class="row">
 <a class="btn btn-icon btn-facebook" href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
 <a class="btn btn-icon btn-twitter" href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
 <a class="btn btn-icon btn-googleplus" href="#"><i class="fa fa-google-plus"></i><span>Google+</span></a>
+</div>
+
+<div class="row" style="padding-left:70px;">
 <a class="btn btn-icon btn-pinterest" href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
 <a class="btn btn-icon btn-linkedin" href="#"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
-
+</div>
 
 </div>
-<div class= "bottom-pic" style="position: relative;top: 0px;left: 800px;bottom:0px;">
- <img id = "bot-pic" src = "https://www.vitaparkeye.com/UserFiles/doctorsunited_2.jpg">
+<!--<div class= "bottom-pic" style="position: relative;height:900px;left: 800px;bottom:0px;">-->
+<!-- <img id = "bot-pic" src = "https://www.vitaparkeye.com/UserFiles/doctorsunited_2.jpg">-->
 </div>
 </div>
 
@@ -378,7 +383,18 @@
 <Style>
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
-
+.banner {
+    background-image: url('https://www.vitaparkeye.com/UserFiles/doctorsunited_2.jpg');
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 32px;
+   
+  }
 /*Ignore me, I'm just page styling*/
 body {
   background: #ffffff;
@@ -390,18 +406,18 @@ body {
   background: linear-gradient(135deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
 }
 
-h10 {font-size:1.5em;}
-
 #social-platforms {
   position:relative;
   font-size:1rem;
   text-align:center;
-  height:120px;
-  overflow:hidden;
-  ont-family: 'Roboto',sans-serif;
-  font-size:10px;
+  height:600px;
+  font-family: 'Roboto',sans-serif;
+  font-size:25px;
   top: 100px;
-  right: 300px;"
+  /*right: 20px;*/
+  /*left:480px;*/
+  padding-top: 20px;
+  padding: 10px;
 }
 
 /*Pen code from this point on*/
@@ -416,7 +432,6 @@ h10 {font-size:1.5em;}
   -webkit-transition:all .5s;
   -moz-transition:all .5s;
   transition:all .5s;
-  overflow:hidden
 }
 
 .btn:hover {
