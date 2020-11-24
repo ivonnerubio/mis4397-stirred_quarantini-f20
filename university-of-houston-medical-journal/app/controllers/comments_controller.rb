@@ -2,7 +2,10 @@ class CommentsController < ApplicationController
     before_action :set_blog
     
     def create
-        @blog.comments.create! comments_params
+       comment = @blog.comments.create! comments_params
+       
+       CommentsMailer.submitted(comment).deliver_later
+       CommentsChannel.broadcast(comment)
         redirect_to @blog
     end
     

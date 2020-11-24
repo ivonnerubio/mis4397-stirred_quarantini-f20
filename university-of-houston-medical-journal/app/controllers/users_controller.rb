@@ -9,14 +9,14 @@ class UsersController < ApplicationController
         
     end
     
-    def edit
-        @user = User.find(params[:id])
-    end
+    # def edit
+    #     @user = User.find(params[:id])
+    # end
     
-    def update
-        current_user.update(params[:user])
-        redirect_to current_user
-    end
+    # def update
+    #     current_user.update(params[:user])
+    #     redirect_to current_user
+    # end
     
     private
     

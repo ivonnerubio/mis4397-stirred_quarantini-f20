@@ -1,5 +1,21 @@
+<!--<p id="notice"><%#= notice %></p>-->
+<!--<%#= form_for([ @blog, Comment.new], remote: true) do |form| %>-->
+<!--   <br>-->
+<!--    <br>-->
+<!--        <div class="form-group">-->
+<!--        <label for="exampleFormControlTextarea1"><h2>Share your thoughts on this blog post!</h2></label>-->
+<!--           <textarea class="form-control" id="<%#= form.text_field :body %>"></textarea>-->
+           
+           
+<!--           <button type="button" class="btn btn-secondary"><%#= form.submit %></button>-->
+
+<!--        </div>-->
+<!--<%# end %>-->
+
+
+
 <%= form_for([ @blog, Comment.new], remote: true) do |form| %>
-    Your comment:<br>
-    <%= form.text_field :body, size: '50x20' %><br>
-    <%= form.submit %>
+    <%= form.text_field :body, size: '100x100' %><br>
+    <button type="button" class="btn btn-secondary"><%= form.submit %></button>
 <% end %>
+

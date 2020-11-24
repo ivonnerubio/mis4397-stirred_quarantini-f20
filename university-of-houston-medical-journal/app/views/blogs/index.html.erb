@@ -67,13 +67,14 @@
         
     
       <div class="col">
+        <h1 id="item-1">Stay Up to Date</h1><br></br>
         <% @blogs.each do |blog| %>
           <div class="card mb-3" style ="max-width: 90rem;">
             <img class="card-img-to" src="https://media.istockphoto.com/photos/paramedics-taking-patient-on-stretcher-from-ambulance-to-hospital-picture-id1128171354?k=6&m=1128171354&s=612x612&w=0&h=bNUpk1ilAjRVbjxpdwV1eY4SM7cipND-Tb2pmhdBvwE=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
               <div class="card-body">
                 <h5 class="card-title"><%= blog.post_title %></h5>
                 <p class="card-text"><%= blog.text %></p>
-                <p class="card-text"><small class="text-muted"><%= blog.author_name %> | <%= blog.year %> | <%= blog.post_type %> | <%= blog.comment_section %></small></p>
+                <p class="card-text"><small class="text-muted"><%= blog.author_name %> | November 24, 2020 | <%= blog.post_type %> <%= blog.comment_section %></small></p>
                 <%= link_to 'Continue Reading', blog %>
                 <%#= link_to 'Edit', edit_blog_path(blog) %>
                 <%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -81,6 +82,8 @@
           </div>
         <% end %>
       </div>
+      <br></br>
+      
       <div class="profile-section">
         <h1 id="item-2">November 2020</h1><br></br>
           <div class="col">
@@ -156,7 +159,10 @@
         <h1 id="item-6">July 2020</h1><br></br>
           <div class="col">
             <div class="card mb-3" style ="max-width: 90rem;">
-              <img class="card-img-to" src="https://media.istockphoto.com/photos/doctor-surgeon-analyzing-patient-brain-testing-result-and-human-on-picture-id962094932?k=6&m=962094932&s=612x612&w=0&h=Yv-BYVsg7FhWEr_Ru72tlQOS-SANyhWN6_-KOLfAK6E=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+              <!--<img class="card-img-to" src="https://media.istockphoto.com/photos/doctor-surgeon-analyzing-patient-brain-testing-result-and-human-on-picture-id962094932?k=6&m=962094932&s=612x612&w=0&h=Yv-BYVsg7FhWEr_Ru72tlQOS-SANyhWN6_-KOLfAK6E=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">-->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1i3gp_aN1cs" allowfullscreen></iframe>
+              </div>
                 <div class="card-body">
                   <h1 class="card-title">A Handless Surgeon? It’s Not as Crazy as it Sounds.</h1>
                   <p class="card-text">During my halcyon college days, long before I knew I would “grow up” to be a surgeon, I was a huge fan of Star Trek. Although the ideas behind warp speed travel and teleportation were mind blowing, I was even more captivated by “Bones” McCoy’s Tricorder. This and other similarly nifty little medical devices could in the hands of the right doctor affect surgical-like cures for most any disease non-invasively and without pain.</p>
