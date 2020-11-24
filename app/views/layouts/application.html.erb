@@ -16,13 +16,13 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark d-flex">
+    <nav class="navbar navbar-expand-lg navbar-dark d-flex" style="padding-top:0px;padding-bottom:0px;">
 
       <a class="navbar-brand" href="/homes">
-        <img id = "logo" src= "https://www.flaticon.com/svg/static/icons/svg/684/684279.svg" style= "width: 5rem; height: 5rem;">
+        <img id = "logo" src= "https://www.flaticon.com/svg/static/icons/svg/684/684279.svg" style= "width: 6rem; height: 6rem;">
       </a>
       <li class="nav-item">
-        <a class="navbar-brand" href="/homes">MedStud</a>
+        <a class="navbar-brand" style="font-size:30px;" href="/homes">MedStud</a>
       </li>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,23 +31,20 @@
         
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="/articles">Profile Template <span class="sr-only"></span></a>
-          </li>
+    
            <li class="nav-item">
-            <a class="nav-link" href="/medical_students">Medical Students <span class="sr-only"></span></a>
+            <a class="nav-link" style="font-size:20px;padding-top:25px;padding-right:10px;" href="/medical_students">Medical Students <span class="sr-only"></span></a>
           </li>  
        <li class="nav-item">
-            <a class="nav-link" href="/specialties">Specialties <span class="sr-only"></span></a>
+            <a class="nav-link" style="font-size:20px;padding-top:25px;padding-right:10px;" href="/specialties">Specialties <span class="sr-only"></span></a>
           </li>
             
           <li class="nav-item">
-            <a class="nav-link" href="/blogs">Blog</a>
+            <a class="nav-link" style="font-size:20px;padding-top:25px;padding-right:10px;" href="/blogs">Blog</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="/abouts">About</a>
+            <a class="nav-link" style="font-size:20px;padding-top:25px;padding-right:10px;" href="/abouts">About</a>
           </li>
 
           <div class="m-auto">
@@ -65,11 +62,11 @@
             <%#/li><%>
               <%#= button_to "logout", destroy_user_session_path, method: :delete %>
               <li class="nav-item">
-                <%= link_to('Sign Out', destroy_user_session_path, method: :delete) %>        
+                <%= link_to('Sign Out ', destroy_user_session_path, method: :delete) %>        
               </li>
             <% else %>
               <li class="nav-item">
-                <%= link_to('Sign In', new_user_session_path) %>  
+                <%= link_to(' Sign In', new_user_session_path) %>  
               </li>
             <% end %>
             
