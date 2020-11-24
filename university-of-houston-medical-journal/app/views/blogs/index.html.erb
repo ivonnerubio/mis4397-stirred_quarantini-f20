@@ -8,8 +8,8 @@
           <br></br>
           <br></br>
           
-          <h5 class="card-title" style= "font-size: 90px;">MedStud Blog</h5>
-          <p class="card-text" style= "font-size: 50px;">Leading scientific inquiry</p>
+          <h5 class="card-title" style= "font-size: 90px; text-shadow: 1px 1px 2px #000000;">MedStud Blog</h5>
+          <p class="card-text" style= "font-size: 50px; text-shadow: 1px 1px 2px #000000;">Leading scientific inquiry</p>
           <p class="card-text"></p>
         </div>
     </div>
@@ -64,26 +64,28 @@
     <div class="col-8">
       <div class=profile-section left-container-wrapper></div>
       <div data-spy="scroll" data-target="#navbar-article" data-offset="0">
-        
-    
-      <div class="col">
-        <h1 id="item-1">Stay Up to Date</h1><br></br>
-        <% @blogs.each do |blog| %>
-          <div class="card mb-3" style ="max-width: 90rem;">
-            <img class="card-img-to" src="https://media.istockphoto.com/photos/paramedics-taking-patient-on-stretcher-from-ambulance-to-hospital-picture-id1128171354?k=6&m=1128171354&s=612x612&w=0&h=bNUpk1ilAjRVbjxpdwV1eY4SM7cipND-Tb2pmhdBvwE=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title"><%= blog.post_title %></h5>
-                <p class="card-text"><%= blog.text %></p>
-                <p class="card-text"><small class="text-muted"><%= blog.author_name %> | November 24, 2020 | <%= blog.post_type %> <%= blog.comment_section %></small></p>
-                <%= link_to 'Continue Reading', blog %>
-                <%#= link_to 'Edit', edit_blog_path(blog) %>
-                <%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-              </div>
-          </div>
-        <% end %>
-      </div>
+
       <br></br>
       
+      <p id="notice"><%= notice %></p>
+            <div class="col">
+              <h1 id="item-1">Stay Up to Date</h1><br></br>
+              <% @blogs.each do |blog| %>
+                <div class="card mb-3" style ="max-width: 90rem;">
+                  <img class="card-img-to" src="https://media.istockphoto.com/photos/paramedics-taking-patient-on-stretcher-from-ambulance-to-hospital-picture-id1128171354?k=6&m=1128171354&s=612x612&w=0&h=bNUpk1ilAjRVbjxpdwV1eY4SM7cipND-Tb2pmhdBvwE=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= blog.post_title %></h5>
+                      <p class="card-text"><%= blog.text %></p>
+                      <p class="card-text"><small class="text-muted"><%= blog.author_name %> | November 24, 2020 | <%= blog.post_type %> <%= blog.comment_section %></small></p>
+                      <%= link_to 'Continue Reading', blog %>
+                      <%#= link_to 'Edit', edit_blog_path(blog) %>
+                      <%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
+                </div>
+              <% end %>
+            </div>
+        <br></br>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
       <div class="profile-section">
         <h1 id="item-2">November 2020</h1><br></br>
           <div class="col">
