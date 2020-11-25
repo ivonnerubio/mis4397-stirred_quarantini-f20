@@ -52,12 +52,12 @@
       <div class="profile-section">
           <div class="col">
             <div class="card mb-3 bg-light" style ="max-width: 100rem;">
-              <h1><%= @blog.post_title %></h1><br></br>
-              <p class="card-text text-muted"><%= @blog.author_name %> | <%#= @blog.year %>November 24, 2020 | <%= @blog.post_type %> <%= @blog.comment_section %></p>
-              <img class="card-img-to" src="https://media.istockphoto.com/photos/paramedics-taking-patient-on-stretcher-from-ambulance-to-hospital-picture-id1128171354?k=6&m=1128171354&s=612x612&w=0&h=bNUpk1ilAjRVbjxpdwV1eY4SM7cipND-Tb2pmhdBvwE=" alt="Card image cap" style= "max-width: 100rem; object-fit: cover;">
+              <h1><%= @blog.title %></h1><br></br>
+              <p class="card-text text-muted"><%= @blog.author_name %> | November 24, 2020 | <%= @blog.post_type %> </p>
+              <img class="card-img-to" src="<% @blog.image %>" alt="Card image cap" style= "max-width: 100rem; object-fit: cover;">
                 <div class="card-body">
                   <h5 class="card-title"></h5>
-                  <p class="card-text"><%= @blog.text %></p>
+                  <p class="card-text"><%= @blog.body %></p>
                 </div>
             </div>
           </div>
@@ -71,7 +71,9 @@
                 <%# Expands to render partial: 'comments/comment', collection: @post.comments %>
                 <%= render @blog.comments %>
               </div>
-              <%= render 'comments/new', blog: @blog %>
+              <!--I changed this from <%#= render 'comments/new', blog: @blog %> to <%#= render 'comments/form', blog: @blog %>-->
+              <!--because I wanted to change the name of my _new.html.erb file for the comment to _form.html.erb like the rest of them.-->
+              <%= render 'comments/form', blog: @blog %>
             </div>
           </div>
       </div>

@@ -15,7 +15,6 @@
 
 
 <%= form_for([ @blog, Comment.new], remote: true) do |form| %>
-    <%= form.text_field :body, size: '100x100' %><br>
-    <button type="button" class="btn btn-secondary"><%= form.submit %></button>
+    <%= form.text_area :body, class: 'form-control', required: true  %>
+    <%= form.submit "Comment", class: 'btn btn-danger btn-sm btn-block' %>
 <% end %>
-

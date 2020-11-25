@@ -1,309 +1,83 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+<!--- .post-details form start -->
+<%= form_for(blog, class: 'needs-validation') do |f| %>
+    <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
-    
-</head>
-
-<body class="bg-light">
-
-    <div class="container">
-      <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://www.flaticon.com/svg/static/icons/svg/684/684279.svg" alt="" width="72" height="72">
-        <h2>Create New Blog Post</h2>
-        <p class="lead">Connect. Discover. Share.
-        <br>Join thousands of researchers, including Nobel Laureates, in scientific inquiry.
-        </p>
-      </div>
-                    
-      <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Post Layout</span>
-            <span class="badge badge-secondary badge-pill">1st post</span>
-          </h4>
-          <div class="card mb-3" style ="max-width: 25rem; height: 30rem">
-                  <img class="card-img-to" src="data:image/png;base64,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" alt="Card image cap" style= "max-width: 25rem; max-height: 20rem; object-fit: cover;">
-                    <div class="card-body">
-                      <h4 class="card-title">Blog Post Title</h4>
-                      <p class="card-text">This is where your text will go</p>
-                      <p class="card-text"><small class="text-muted">Author's First and Last Name | Date | Post Type</small></p>
-                      Continue Reading
-                      <%#= link_to 'Edit', edit_blog_path(blog) %>
-                      <%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </div>
-                </div> 
-          <!--<ul class="list-group mb-3">-->
-          <!--  <li class="list-group-item d-flex justify-content-between lh-condensed">-->
-          <!--    <div>-->
-          <!--      <h6 class="my-0">Product name</h6>-->
-          <!--      <small class="text-muted">Brief description</small>-->
-          <!--    </div>-->
-          <!--    <span class="text-muted">$12</span>-->
-          <!--  </li>-->
-          <!--  <li class="list-group-item d-flex justify-content-between lh-condensed">-->
-          <!--    <div>-->
-          <!--      <h6 class="my-0">Second product</h6>-->
-          <!--      <small class="text-muted">Brief description</small>-->
-          <!--    </div>-->
-          <!--    <span class="text-muted">$8</span>-->
-          <!--  </li>-->
-          <!--  <li class="list-group-item d-flex justify-content-between lh-condensed">-->
-          <!--    <div>-->
-          <!--      <h6 class="my-0">Third item</h6>-->
-          <!--      <small class="text-muted">Brief description</small>-->
-          <!--    </div>-->
-          <!--    <span class="text-muted">$5</span>-->
-          <!--  </li>-->
-          <!--  <li class="list-group-item d-flex justify-content-between bg-light">-->
-          <!--    <div class="text-success">-->
-          <!--      <h6 class="my-0">Promo code</h6>-->
-          <!--      <small>EXAMPLECODE</small>-->
-          <!--    </div>-->
-          <!--    <span class="text-success">-$5</span>-->
-          <!--  </li>-->
-          <!--  <li class="list-group-item d-flex justify-content-between">-->
-          <!--    <span>Total (USD)</span>-->
-          <!--    <strong>$20</strong>-->
-          <!--  </li>-->
-          <!--</ul>-->
-
-          <form class="card p-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Leave a comment">
-              <div class="input-group-append">
-                <button type="submit" class="btn btn-secondary">Comment</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-8 order-md-1">
-          <h4 class="mb-3">Post Details</h4>
-          <form class="needs-validation" novalidate="">
-            <div class="row">
-            </div>
-            <div class="mb-3">
-              <label for="firstName">First and Last</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="firstName" placeholder="(e.g., Misha Khan" required="">
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your first and last name are required.
-                </div>
-              </div>
-            </div>
-            
-            <div class="mb-3">
-              <label for="username">Post Title</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="username" placeholder="Title" required="">
-                <div class="invalid-feedback" style="width: 100%;">
-                  A post title is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="email">Post Body <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="Your text will go here.">
-              <div class="invalid-feedback">
-                Please input the text of your blog post.
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="address">Date</label>
-              <input type="text" class="form-control" id="address" placeholder="Month Day, Year (e.g., January 1, 2020)" required="">
-              <div class="invalid-feedback">
-                Please enter today's date.
-              </div>
-            </div>
-
-            <!--<hr class="mb-4">-->
-            <!--<div class="custom-control custom-checkbox">-->
-            <!--  <input type="checkbox" class="custom-control-input" id="same-address">-->
-            <!--  <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>-->
-            <!--</div>-->
-            <!--<div class="custom-control custom-checkbox">-->
-            <!--  <input type="checkbox" class="custom-control-input" id="save-info">-->
-            <!--  <label class="custom-control-label" for="save-info">Save this information for next time</label>-->
-            <!--</div>-->
-            <hr class="mb-4">
-
-            <h4 class="mb-3">Type of Post</h4>
-
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-                <label class="custom-control-label" for="credit">Editorial</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="debit">Opinion</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="paypal">General</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="paypal">Art</label>
-              </div>
-            </div>
-            <!--<div class="row">-->
-            <!--  <div class="col-md-6 mb-3">-->
-            <!--    <label for="cc-name">Name on card</label>-->
-            <!--    <input type="text" class="form-control" id="cc-name" placeholder="" required="">-->
-            <!--    <small class="text-muted">Full name as displayed on card</small>-->
-            <!--    <div class="invalid-feedback">-->
-            <!--      Name on card is required-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--  <div class="col-md-6 mb-3">-->
-            <!--    <label for="cc-number">Credit card number</label>-->
-            <!--    <input type="text" class="form-control" id="cc-number" placeholder="" required="">-->
-            <!--    <div class="invalid-feedback">-->
-            <!--      Credit card number is required-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-            <!--  <div class="col-md-3 mb-3">-->
-            <!--    <label for="cc-expiration">Expiration</label>-->
-            <!--    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">-->
-            <!--    <div class="invalid-feedback">-->
-            <!--      Expiration date required-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--  <div class="col-md-3 mb-3">-->
-            <!--    <label for="cc-expiration">CVV</label>-->
-            <!--    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">-->
-            <!--    <div class="invalid-feedback">-->
-            <!--      Security code required-->
-            <!--    </div>-->
-            <!--  </div>-->
-            <!--</div>-->
-            <hr class="mb-4">
-            <button class="btn btn-danger btn-lg btn-block" type="submit">Create Post</button>
-          </form>
-        </div>
+      <ul>
+      <% blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--<form class="needs-validation" novalidate="">-->
+  <div class="row">
+  </div>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <div class="input-group">
+      <%= f.text_field :title, class: 'form-control', placeholder: "Blog post title here", required: true %>
+      <div class="invalid-feedback" style="width: 100%;">
+          Blog title is missing.
       </div>
     </div>
-    <br></br>
-<br></br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-  
-
-</body>
-
-
-
-
-<!---->
-<!---->
-<!---->
-    <div class="card bg-light text-black text-center" style="width: 102rem; height:50rem;">
-      <div class="text-center mb-4">
-        <br></br><br></br><img class="mb-4" src="https://www.flaticon.com/svg/static/icons/svg/684/684279.svg" alt="" width="72" height="72">
-        <h1 class="display">New Blog Post</h1>
-        <p>Connect. Discover. Share.<a href="https://caniuse.com/#feat=css-placeholder-shown"></a></p>
-      </div>
-      
-      Join thousands of researchers, including Nobel Laureates, in
-      
-      <%= form_for(blog) do |f| %>
-        <% if blog.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
-      
-            <ul>
-            <% blog.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-        
-        
-      
-        <div class="field">
-          <%= f.label :post_title %>
-          <%= f.text_field :post_title %>
-        </div>
-      
-        <div class="field">
-          <%= f.label :text %>
-          <%= f.text_field :text %>
-        </div>
-        
-        <div class="field">
-          <%= f.label :author_name %>
-          <%= f.text_field :author_name %>
-        </div>
-      
-        <div class="field">
-          <%= f.label :authorID %>
-          <%= f.text_field :authorID %>
-        </div>
-        
-        <!--<div class="field">-->
-        <!--  <%#= f.label :year %>-->
-        <!--  <%#= f.number_field :year %>-->
-        <!--</div>-->
-      
-        <div class="field">
-          <%= f.label :post_type %>
-          <%= f.text_field :post_type %>
-        </div>
-      
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-      
-      <p id="notice"><%= notice %></p>
   </div>
+  
+  <div class="mb-3">
+    <%= f.label :body %>
+    <div class="input-group">
+      <%= f.text_area :body, class: 'form-control', placeholder: "Body of post here", required: true  %>
+      <!--<input type="text" class="form-control" id="username" placeholder="Title" required="">-->
+      <!--<div class="invalid-feedback" style="width: 100%;">-->
+      <!--  A post title is required.-->
+      <!--</div>-->
+    </div>
+    <div class="invalid-feedback" style="width: 100%;">
+          Body of blog post is missing.
+      </div>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :author_name %>
+    <%= f.text_field :author_name, class: 'form-control', placeholder: "Name of the author of this post.", required: true  %>
+    <div class="invalid-feedback" style="width: 100%;">
+          First and last name are missing.
+      </div>
+  </div>
+  
+  
+  <div class="mb-3">
+    <%= f.select(:post_type) do %>
+      <% ['General', 'News', 'Editorial', 'Opinion', 'Artwork'].each do |c| -%>
+        <%= content_tag(:option, c, value: c) %>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <!--<div class="d-block my-3">-->
+  <!--  <div class="custom-control custom-radio">-->
+  <!--    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">-->
+  <!--    <label class="custom-control-label" for="credit">Editorial</label>-->
+  <!--  </div>-->
+  <!--  <div class="custom-control custom-radio">-->
+  <!--    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">-->
+  <!--    <label class="custom-control-label" for="debit">Opinion</label>-->
+  <!--  </div>-->
+  <!--  <div class="custom-control custom-radio">-->
+  <!--    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">-->
+  <!--    <label class="custom-control-label" for="paypal">General</label>-->
+  <!--  </div>-->
+  <!--  <div class="custom-control custom-radio">-->
+  <!--    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">-->
+  <!--    <label class="custom-control-label" for="paypal">Art</label>-->
+  <!--  </div>-->
+  <!--</div>-->
+  
+  <hr class="mb-4">
+  <%= f.submit "Create Post", class: 'btn btn-danger btn-lg btn-block' %>
+  <!--<button class="btn btn-danger btn-lg btn-block" type="submit">Create Post</button>-->
+<% end %>
+          

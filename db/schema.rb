@@ -59,21 +59,12 @@ ActiveRecord::Schema.define(version: 20201120033833) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
-    t.string   "string"
-    t.string   "recent_posts"
-    t.string   "text"
-    t.string   "article_title"
-    t.string   "archives"
-    t.integer  "year"
-    t.string   "post_title"
     t.string   "body"
     t.string   "author_name"
-    t.string   "authorID"
     t.string   "post_type"
-    t.string   "comment_section"
-    t.string   "ad_space"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -229,4 +220,5 @@ ActiveRecord::Schema.define(version: 20201120033833) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "blogs"
 end
