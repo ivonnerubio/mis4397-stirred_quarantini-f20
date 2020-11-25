@@ -57,37 +57,22 @@ And would suffice.", required: true  %>
   
   
   <hr class="mb-3">
-    <%= f.label :post_type %>
-    <div class="form-inline">
-      <%= f.select(:post_type, class: 'custom-select my-1 mr-sm-2', require: true) do %>
+    <p>Type of Post</p>
+    <% f.label :post_type %>
+    <%= f.select(:post_type) do %>
       <% ['General', 'News', 'Editorial', 'Opinion', 'Artwork'].each do |c| -%>
         <%= content_tag(:option, c, value: c) %>
       <% end %>
     <% end %>
-    </div>
-    
   </hr>
   
-<hr class="input-group mb-3">
-  <!--<p>Upload an Image</p>-->
-  <!--<div class="input-group-prepend">-->
-  <!--  <span class="input-group-text" id="image">Upload<%#= f.label :image, class: 'btn btn-danger btn-lg btn-block' %></span>-->
-  <!--</div>  -->
+<hr class="mb-3">
   <div class="custom-file">
-    <label class="custom-file-label" for="image">Choose file</label>
-    <%= f.file_field :image, class: 'custom-file-input btn btn-danger btn-lg btn-block', require: true %>
+  <%= f.file_field :image, class: 'custom-file-input' %>
   </div>
 </hr>
 
-<!--<div class="input-group mb-3">-->
-<!--  <div class="input-group-prepend">-->
-<!--    <span class="input-group-text" id="inputGroupFileAddon01">Upload an Image</span>-->
-<!--  </div>-->
-<!--  <div class="custom-file">-->
-<!--    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">-->
-<!--    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
-<!--  </div>-->
-<!--</div>-->
+
 
   <!--<div class="d-block my-3">-->
   <!--  <div class="custom-control custom-radio">-->

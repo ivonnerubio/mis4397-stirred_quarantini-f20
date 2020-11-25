@@ -11,10 +11,19 @@ Rails.application.routes.draw do
   resources :f_dmikaels
   resources :medical_students
   
+  devise_for :users
+  # Professor told me to move "devise_for :users" after the "resources :users, only: [:show, :edit, :update, :index]". But if I do, the "Too many redirects" error is produced. 
+  # Found this on Github: https://github.com/heartcombo/devise/issues/367
+  # "RegistrationsController does not allow you to access the new action when you
+  # are signed in. If you are signed in and try to access it, it redirects you
+  # back to the root_path. Which is going to redirect you again and again.
+  
+  # My advice is to create another controller which shows you the sign up form,
+  # but sends you to the proper registrations controller."
   resources :users, only: [:show, :edit, :update, :index]
-    devise_for :users
 
-  # root "users#index"
+
+  root "users#show" # Changed "users#index" to "users#show" and it sent me to the profile page!
   resources :sign_ins
   resources :join_nows
   
