@@ -8,7 +8,7 @@
   <div class="row">
       <% @specialties.each do |specialty| %>
     <div class="card col-4">
-    <img src= <%= specialty.text %> style=" position:relative;width:100%;height:200px;class="card-img-top">
+    <img src= "<%= specialty.text %>" style="position:relative;width:100%;height:200px;" class="card-img-top">
     <div class="card-body">
       <h5 class="card-title"><%= specialty.category_title %></h5>
       <p class="card-text"><%= specialty.category_description %></p>

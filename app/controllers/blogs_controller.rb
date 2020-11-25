@@ -20,6 +20,14 @@ class BlogsController < ApplicationController
   # GET /blogs/1/edit
   def edit
   end
+  
+  
+  def upload
+    uploaded_io = params[:blog][:image]
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+  end
 
   # POST /blogs
   # POST /blogs.json
@@ -70,6 +78,6 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :author_name, :post_type)
+      params.require(:blog).permit(:title, :body, :author_name, :post_type, :image)
     end
 end

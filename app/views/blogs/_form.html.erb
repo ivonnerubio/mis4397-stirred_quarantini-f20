@@ -15,20 +15,28 @@
 <!--<form class="needs-validation" novalidate="">-->
   <div class="row">
   </div>
-  <div class="mb-3">
+  <hr class="mb-3">
     <%= f.label :title %>
     <div class="input-group">
-      <%= f.text_field :title, class: 'form-control', placeholder: "Blog post title here", required: true %>
+      <%= f.text_field :title, class: 'form-control font-italic text-muted font-weight-light', placeholder: "Fire and Ice", required: true %>
       <div class="invalid-feedback" style="width: 100%;">
           Blog title is missing.
       </div>
     </div>
-  </div>
+  </hr>
   
-  <div class="mb-3">
+  <hr class="mb-3">
     <%= f.label :body %>
     <div class="input-group">
-      <%= f.text_area :body, class: 'form-control', placeholder: "Body of post here", required: true  %>
+      <%= f.text_area :body, class: 'form-control font-italic text-muted font-weight-light', rows:9, placeholder: "Some say the world will end in fire,
+Some say in ice.
+From what I’ve tasted of desire
+I hold with those who favor fire.
+But if it had to perish twice,
+I think I know enough of hate
+To say that for destruction ice
+Is also great
+And would suffice.", required: true  %>
       <!--<input type="text" class="form-control" id="username" placeholder="Title" required="">-->
       <!--<div class="invalid-feedback" style="width: 100%;">-->
       <!--  A post title is required.-->
@@ -37,25 +45,49 @@
     <div class="invalid-feedback" style="width: 100%;">
           Body of blog post is missing.
       </div>
-  </div>
+  </hr>
 
-  <div class="mb-3">
+  <hr class="mb-3">
     <%= f.label :author_name %>
-    <%= f.text_field :author_name, class: 'form-control', placeholder: "Name of the author of this post.", required: true  %>
+    <%= f.text_field :author_name, class: 'form-control font-italic text-muted font-weight-light', placeholder: "Robert Frost", required: true  %>
     <div class="invalid-feedback" style="width: 100%;">
           First and last name are missing.
-      </div>
-  </div>
+    </div>
+  </hr>
   
   
-  <div class="mb-3">
-    <%= f.select(:post_type) do %>
+  <hr class="mb-3">
+    <%= f.label :post_type %>
+    <div class="form-inline">
+      <%= f.select(:post_type, class: 'custom-select my-1 mr-sm-2', require: true) do %>
       <% ['General', 'News', 'Editorial', 'Opinion', 'Artwork'].each do |c| -%>
         <%= content_tag(:option, c, value: c) %>
       <% end %>
     <% end %>
+    </div>
+    
+  </hr>
+  
+<hr class="input-group mb-3">
+  <!--<p>Upload an Image</p>-->
+  <!--<div class="input-group-prepend">-->
+  <!--  <span class="input-group-text" id="image">Upload<%#= f.label :image, class: 'btn btn-danger btn-lg btn-block' %></span>-->
+  <!--</div>  -->
+  <div class="custom-file">
+    <label class="custom-file-label" for="image">Choose file</label>
+    <%= f.file_field :image, class: 'custom-file-input btn btn-danger btn-lg btn-block', require: true %>
   </div>
+</hr>
 
+<!--<div class="input-group mb-3">-->
+<!--  <div class="input-group-prepend">-->
+<!--    <span class="input-group-text" id="inputGroupFileAddon01">Upload an Image</span>-->
+<!--  </div>-->
+<!--  <div class="custom-file">-->
+<!--    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">-->
+<!--    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+<!--  </div>-->
+<!--</div>-->
 
   <!--<div class="d-block my-3">-->
   <!--  <div class="custom-control custom-radio">-->
