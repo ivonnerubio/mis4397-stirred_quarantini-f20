@@ -60,9 +60,9 @@ ActiveRecord::Schema.define(version: 20201120033833) do
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.string   "body"
+    t.string   "image"
     t.string   "author_name"
     t.string   "post_type"
-    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

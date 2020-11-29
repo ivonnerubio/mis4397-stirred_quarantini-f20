@@ -11,23 +11,24 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
   </ol>
+  
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://info.cell.com/hubfs/CP20313_Med_eTOC_1024x342.jpg" class="d-block w-100" style="height:500px" >
+      <img id = "carousel-image" src="https://info.cell.com/hubfs/CP20313_Med_eTOC_1024x342.jpg" class="d-block w-100" style="height:500px" >
       <div class="carousel-caption d-none d-md-block">
         <!--<h5 style="float:left">MedStud</h5><br>-->
         <!--<p style="float:left">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
       </div>
     </div>
     <div class="carousel-item">
-      <img src="https://wallpaperaccess.com/full/185895.jpg" class="d-block w-100" style="height:500px">
+      <img id = "carousel-image" src="https://wallpaperaccess.com/full/185895.jpg" class="d-block w-100" style="height:500px">
       <div class="carousel-caption d-none d-md-block">
         <!--<h5>Second slide label</h5>-->
         <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
       </div>
     </div>
     <div class="carousel-item">
-      <img src="https://www.gulfcoast.edu/images/medical-and-health-2.jpg" class="d-block w-100" style="height:500px">
+      <img id = "carousel-image" src="https://www.gulfcoast.edu/images/medical-and-health-2.jpg" class="d-block w-100" style="height:500px">
       <div class="carousel-caption d-none d-md-block">
         <!--<h5>Third slide label</h5>-->
         <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
@@ -54,7 +55,7 @@
 <body style="background-image: url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");" >
 
  <div class = "head-top">
- <h1 style="font-family:Georgia, serif; margin-top:15px;text-shadow: 1px 1px 2px #000000;" style = "background-color: #fbf7f5;">Find Students in your medical network</h1>
+ <h1 style="font-family:Georgia, serif; margin-top:15px; margin-left:35px; text-shadow: 1px 1px 2px #000000;" style = "background-color: #fbf7f5;">Find Students in your medical network</h1>
  <br><br>
  <div class = "search">
  <form>
@@ -72,7 +73,7 @@
 <!--/.Carousel Wrapper-->
 <div class = "member-spotlight">
 
- <h4 id = "header-text" class=header style="font-family:Georgia, serif; color:black;font-size:40px;text-shadow: 1px 1px 2px #000000;padding-left:10px;padding-bottom:0px">Member Spotlight</h4>
+ <h1><b>Member Spotlight</b></h1>
  
  <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -267,52 +268,85 @@
    .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       }
-.header{
-  padding: 20px;
-  text-align: left;
-  color: white;
-  
-  font-size: 30px;
-}
+
 </style>
 
 
 
 
-<div class = 'specialties' style = "background-color: #fbf7f5;">
- <h1 class= "header" style="font-family:Georgia, serif; margin-top:15px;text-shadow: 1px 1px 2px #000000;">Top specialties on our network</h1>
+<div class = "specialties">
+ <h1><b>Top specialties on our network</b></h1>
 
  <div class = "inside">
  <ul>
- <li class="small1"><a href = "#"><p class="circle"><span>Primary Care</span></p></a></li>
- <li class="small2"><a href = "#"><p class="circle"><span>Obgyn</span></p></a></li>
- <li class="small3"><a href = "#"><p class="circle"><span>Dentist</span></p></a></li>
- <li class="small4"><a href = "#"><p class="circle"><span>Dermatologist</span></p></a></li>
- <li class="small5"><a href = "#"><p class="circle"><span>Psychiastrist</span></p></a></li>
- </ul>
- <ul>
- <li class="small6"><a href="#"><p class="circle"><span>Eye Doctor</span></p></a></li>
- <li class="small7"><a href="#"><p class="circle"><span>ENT</span></p></a></li>
- <li class="small8"><a href="#"><p class="circle"><span>Gastroenterologist</span></p></a></li>
- <li class="small9"><a href=""><p class="circle"><span>Heart</span></p></a></li>
- <li class="small10"><a href="#"><p class="circle"><span>Psychology</span></p></a></li>
+     <li class="small1">
+        <a href = "#">
+            <p class="circle">
+                <i id = "cat-icons" class="fa fa-medkit fa-4x" aria-hidden="true"></i>
+                <div class = "circle-text">Primary Care</div> 
+            </p>
+        </a>
+    </li>
+    <li class="small2">
+         <a href = "#">
+             <p class="circle">
+                <i id = "cat-icons2" class="fa fa-female fa-4x" aria-hidden="true"></i>
+                <div class = "circle-text">Obygyn</div>
+            </p>        
+        </a>
+    </li>
+ <li class="small3"><a href = "#"><p class="circle"><i id = "cat-icons3" class="fa fa-user-md fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">Dentist</div></p></a></li>
+ <li class="small4"><a href = "#"><p class="circle"><i id = "cat-icons" class="fa fa-search fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">Dermatologist</div></p></a></li>
+<li class="small5"><a href = "#"><p class="circle"><i id = "cat-icons" class="fa fa-sun-o fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">Psychiatrist</div></p></a></li>
+ <li class="small6"><a href="#"><p class="circle"><i id = "cat-icons" class="fa fa-eye fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">Eye Doctor</div></p></a></li>
+ <li class="small7"><a href="#"><p class="circle"><i id = "cat-icons" class="fa fa-life-ring fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">ENT</div></p></a></li>
+ <li class="small8"><a href=""><p class="circle"><i id = "cat-icons" class="fa fa-heart-o fa-4x" aria-hidden="true"></i>
+    <div class = "circle-text">Heart</div></p></a></li>
 
  </ul>
  </div>
 
 </div>
 
+
 <div class = "signup">
- <h1 style="font-size:50px;"><b>Are you a five-star research student?</b></h1>
- <h2>List your publications to reach millions of collegues.</h2>
- <ul>
- <li><p>Attract and engage new collegues</p></li>
- <li><p>Build and strengthen your online reputation</p></li>
- <li><p>Deliver a premium researchers patients love</p></li>
- </ul>
- <br>
- <a href = "/research_submissions"><button class="button" id = "signup-button">Publish your work on our site! </button></a>
+    <div class="signup-left">
+        <i class="fa fa-user-md" aria-hidden="true"></i>
+    </div>
+
+    <div class = "signup-right">
+         <h1>Are you a five-star research student?</h1>
+         <br>
+         <h2>List your publications to reach millions of collegues.</h2>
+         <br>
+         <ul>
+         <li><p>Attract and engage new collegues</p></li>
+         <li><p>Build and strengthen your online reputation</p></li>
+         <li><p>Deliver a premium researchers patients love</p></li>
+         </ul>
+         <br>
+         <a href = "/research_submissions"><button class="button" id = "signup-button">Publish your work on our site! </button></a>
+    </div>
+
+    
+    
+    
 </div>
+
+
+
+
+
+
+
+
+
+
 
 <div class = "citys">
   <h1><b>Find Students and Collegues by State</b></h1>
@@ -377,9 +411,18 @@
 </div>
 </div>
 
+
+
+
+
+
+
+
 </body>
 
 <Style>
+
+
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 .banner {
@@ -404,6 +447,8 @@ body {
   background: -ms-linear-gradient(-45deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
   background: linear-gradient(135deg, #ffffff 0%,#ffffff 50%,#F2F2F2 50%,#F2F2F2 50%,#F2F2F2 100%);
 }
+
+
 
 #social-platforms {
   position:relative;
@@ -545,38 +590,55 @@ body {
 }
 
   .specialties{
- 
- padding-bottom: 130px;
+ position: relative;
+ padding-bottom: 50px;
+ padding-left: 35px;
 }
 
  .specialties h1{
- font-size: 50px;
  padding-top: 0px;
- margin-left: 40px;
+ margin-left: 0px;
+ font-size: 15px;
  color: black;
- text-align: center;
+ text-align: left;
 
 }
+
+
+.citys h1{
+     padding-top: 0px;
+ margin-left: 0px;
+ font-size: 20px;
+ color: black;
+ text-align: left;
+ text-weight: bold;
+}
+
+
+
 }
 
 .body{
  background-image: url("https://www.multiling.com/wp-content/uploads/2018/07/AdobeStock_177452394.jpeg");
 }
+
+
+
 .inside ul {
  padding: 0;
- margin: 0;
+ position: center;
+  margin: 0 auto;
  display: grid;
- grid-template-rows: repeat(auto-fill, 220px);
- grid-template-columns: repeat(auto-fill, 220px);
- grid-gap: 5px;
- min-width: 480px;
- padding-left:170px;
- padding-top:50px;
+ grid-template-rows: repeat(auto-fill, 180px);
+ grid-template-columns: repeat(auto-fill, 122px);
+ grid-gap: 0px;
+ width: 1000px;
+ 
 }
 
 .inside li.small1 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #D98880;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -587,8 +649,8 @@ body {
 
 
 .inside li.small2 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #D7BDE2;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -598,8 +660,8 @@ body {
 }
 
 .inside li.small3 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #A9CCE3;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -609,8 +671,8 @@ body {
 }
 
 .inside li.small4 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #A3E4D7;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -620,8 +682,8 @@ body {
 }
 
 .inside li.small5 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #F9E79F;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -631,8 +693,8 @@ body {
 }
 
 .inside li.small6 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #F5CBA7;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -642,8 +704,8 @@ body {
 }
 
 .inside li.small7 {
- width: 175px;
- height: 175px;
+ width: 100px;
+ height: 100px;
  background-color: #E5E7E9;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -653,9 +715,9 @@ body {
 }
 
 .inside li.small8 {
- width: 175px;
- height: 175px;
- background-color: #B5EAD7;
+ width: 100px;
+ height: 100px;
+ background-color: #FF9AA2;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
  grid-row: auto / span 1;
@@ -664,8 +726,8 @@ body {
 }
 
 .inside li.small9 {
- width: 175px;
- height: 175px;
+ width: 125px;
+ height: 125px;
  background-color: #FF9AA2;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -675,8 +737,8 @@ body {
 }
 
 .inside li.small10 {
- width: 175px;
- height: 175px;
+ width: 125px;
+ height: 125px;
  background-color: #957DAD;
  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
  border-radius: 50%;
@@ -697,6 +759,7 @@ body {
 
 .circle {
 	border-radius: 50%;
+	position: relative;
 	text-align: center;
 	color: black;
 	display:table;
@@ -723,7 +786,6 @@ body {
 
 
 .head-top{
- background-color: #fbf7f5;
  padding-top: 50px;
  position: relative;
  top: -100px;
@@ -822,8 +884,16 @@ transition: all 0.4s ease 0s;
 
 
 .member-spotlight{
- color: gray;
- box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+ margin-left:35px;
+}
+
+.member-spotlight h1{
+ padding-top: 0px;
+ margin-left: 0px;
+ color: black;
+ font-size: 18px;
+ text-align: left;
+ font-weight: bold;
 }
 
 
@@ -832,42 +902,68 @@ transition: all 0.4s ease 0s;
 }
 
 
-
 .signup{
- background-color: #D98880;
- color: white;
- height: 400px;
-  text-align: center;
+    width: 100%;
+    height: 575px;
+    color: white;
+    background-color: #D98880;
+    margin: auto;
 }
 
-.signup h2{
+.signup-left{
+    float: left;
+    width: 50%;
+    height: 725px;
+    
+}
+
+#sign-icon{
+
+}
+
+.signup-right{
+    float: right;
+    width: 50%;
+    height: 725px;
+}
+
+.signup-right  h1{
+ padding-top: 100px;
+ font-size: 54px;
+ 
+
+}
+
+.signup-right h2{
  padding-top: 5px;
-
- font-size: 30px;
-
-}
-.signup h1{
- padding-top: 35px;
- font-size: 50px;
+ font-size: 23px;
+ font-weight: bold;
 
 }
-.signup ul{
- position: relative;
+
+.signup-right ul{
+ width: 500px;
+   text-align: center;
+  list-style: inside;
+  letter-spacing: 2px;
+  font-weight: 300;
+  position: center;
+  top: 100px;
  list-style-type: none;
-
- font-size: 18px;
 }
 
-.signup p{
+.signup-right li{
 
+}
+
+.signup-right p{
+ text-align: left;
  font-size: 20px;
 }
 
 #signup-button{
- width: 400px;
+ width: 300px;
  padding: 10px;
- top: 200px;
- left: 200px;
  color: black;
  background-color: yellow;
  border: none;
@@ -878,14 +974,15 @@ transition: all 0.4s ease 0s;
 
 .button {
   padding: 15px 25px;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   cursor: pointer;
   outline: none;
+  position: relative;
+  left: 40px;
   color: #fff;
   background-color: #4CAF50;
   border: none;
-  border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
@@ -905,6 +1002,70 @@ transition: all 0.4s ease 0s;
 .west{
  padding-left: 30px;
 }
+
+#cat-icons {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  left: -15px;
+  top: -10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em 0.6em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.);
+
+}
+
+#cat-icons2 {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  left: -7px;
+  top: -10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em 0.6em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.);
+
+}
+
+#cat-icons3 {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  left: -9px;
+  top: -10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 0.5em 0.6em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.);
+
+}
+
+
+
+
+.circle-text{
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    top: -65px;
+    text-align: center;
+    
+    
+}
+
+#carousel-image{
+    opacity: 1.0;
+}
+
+
+
+
 
 
 </Style>
