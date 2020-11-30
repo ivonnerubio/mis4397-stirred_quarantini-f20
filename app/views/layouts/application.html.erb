@@ -51,11 +51,11 @@
 
           <div class="m-auto">
             <form class="form-inline search-form">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style = "position:left;">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style = "position:left;margin-right:0px;font-size:12px;">
             </form>
           </div>
           
-          <li class="navbar align:right">
+          <li class="navbar align:right" >
           <% if user_signed_in? %> 
             <%#li class="nav-item">
               <%#a href="<%= user_path(current_user) %><%#" class="nav-link">My Profile %>
@@ -67,7 +67,7 @@
                 <%= link_to('Sign Out ', destroy_user_session_path, method: :delete) %>        
               </li>
             <% else %>
-              <li class="nav-item">
+              <li class="nav-item" style="font-size: 20px;padding-left:400px;padding-top:20px;">
                 <%= link_to(' Sign In', new_user_session_path) %>  
               </li>
             <% end %>
@@ -77,7 +77,7 @@
                 <%= link_to('Edit registration', edit_user_registration_path) %>
               </li>
             <% else %>
-              <li>
+              <li style="font-size: 20px; padding-left:15px;padding-top:20px;">
                 <%= link_to('Register', new_user_registration_path) %>
               </li>
           <% end %>
