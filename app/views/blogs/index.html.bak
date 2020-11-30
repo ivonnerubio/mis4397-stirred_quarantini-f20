@@ -1,0 +1,356 @@
+<div class="row">
+    <div class="card bg-dark text-white text-center" style="width: 100%; height: 37rem; border-radius: 0%; object-fit: cover; object-fit: center;">
+      <img class="card-img" src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" style="width: 100%; height: 37rem;">
+        <div class="card-img-overlay">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <h5 class="card-title" style= "font-size: 90px; text-shadow: 1px 1px 2px #000000;">MedStud Blog</h5>
+          <p class="card-text" style= "font-size: 50px; text-shadow: 1px 1px 2px #000000;">Leading scientific inquiry</p>
+          <p class="card-text"></p>
+        </div>
+    </div>
+  </div>
+ 
+  <p id="notice"><%= notice %></p>
+
+<%# I want to include a success alert when new blog posts have been made. How do I do this?
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div> %>
+<br></br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <nav id="navbar-article" class="navbar sticky-top navbar-light bg-light flex-column">
+        <a class="navbar-brand" href="#">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+            </div><p></p>
+          </form>
+        </a>
+        <nav class="nav nav-pills flex-column">
+          <h3>Feel like sharing?</h3> 
+          <!--Username: @MedStud_Media Password: Medstud1!-->
+          <%= link_to 'Write your own blog post!', new_blog_path %><p></p>          
+          <h3>Recent Posts</h3>
+          <a class="nav-link" href="#item-1">This week</a><p></p>
+          <h3>Archives</h3>
+          <a class="nav-link" href="#item-2">November 2020</a>
+          <a class="nav-link" href="#item-3">October 2020</a>
+          <a class="nav-link" href="#item-4">September 2020</a>
+          <a class="nav-link" href="#item-5">August 2020</a>
+          <a class="nav-link" href="#item-6">July 2020</a>
+          <a class="nav-link" href="#item-7">June 2020</a>
+          <a class="nav-link" href="#item-8">May 2020</a>
+          <a class="nav-link" href="#item-9">April 2020</a>
+          <a class="nav-link" href="#item-10">March 2020</a>
+          <a class="nav-link" href="#item-11">February 2020</a>
+          <a class="nav-link" href="#item-12">January 2020</a>
+          
+          <p></p><h3>Twitter</h3> 
+          <!--Username: @MedStud_Media Password: Medstud1!-->
+          <a class="nav-link" href="https://twitter.com/MedStud_Media">Follow us on Twitter!</a>
+          
+
+          
+          
+        </nav>
+      </nav>
+    </div>
+    <div class="col-8">
+      <div class=profile-section left-container-wrapper></div>
+      <div data-spy="scroll" data-target="#navbar-article" data-offset="0">
+
+
+      
+      <p id="notice"><%= notice %></p>
+            <div class="col">
+              <h1 id="item-1">Stay Up to Date</h1><br></br>
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  
+                  <% card_items = 1 %>
+                  <% card_items_max = @blogs.count %>
+                  
+                  <% @blogs.each do |blog| %>
+                  
+                  <% if card_items == 1 || card_items % 3 == 1%>
+                  <!-- Carousel Item : card_items <%= card_items %>-->
+                  <% if card_items == 1 %>
+                  <div class="carousel-item active">
+                  <% else %>
+                  <div class="carousel-item">
+                  <% end %>
+                    <div class="row">
+                      <div class="card-deck">
+                        <div class="row no-gutters">
+                  <% end %>
+                        
+                          <!-- Card <%= card_items %> -->
+                          <div class="card col-md-4">
+                            <img class="card-img-top" src="<%= blog.image_url %>" alt="Card image cap" style= "max-width: 18rem; max-height: 6rem; object-fit: cover;">
+                            <div class="card-body">
+                              <p class="card-text"><%= blog.title %></p>
+                              <p class="card-text"><small class="text-muted"><%= link_to 'Continue Reading', blog %></small></p>
+                              <p class="card-text"><small class="text-muted">Created at <%= blog.created_at %></small></p>
+                            </div>
+                          </div>
+                    
+                    <% if (card_items > 0 && card_items % 3 == 0) || card_items == card_items_max %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- closing carousel item -->
+                    <% end %>
+                    
+                    <% card_items = card_items + 1 %>
+                  <% end %>
+                  
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <br></br>
+              <style>
+                $('.carousel').carousel({
+                  interval: 25
+                })
+              </style>
+              
+              <% @blogs.each do |blog| %>
+              <p>__________________________________________________________________________________________________________________________________________________</p><br></br>
+                <div class="card mb-3" style ="max-width: 90rem;">
+                  <img class="card-img-to" src="<%= blog.image_url %>" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                    <div class="card-body">
+                      <h1 class="card-title"><%= blog.title %></h1>
+                      <p class="card-text"><%= blog.body %></p>
+                      <p class="card-text"><small class="text-muted"><%= blog.author_name %> | November 24, 2020 | <%= blog.post_type %> | <%= link_to 'Continue Reading', blog %></small></p>
+                      
+                      <%#= link_to 'Edit', edit_blog_path(blog) %>
+                      <%#= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
+                </div>
+              <% end %>
+            </div>
+        <br></br>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
+      
+      
+      <div class="profile-section">
+        <br></br><h1 id="item-2">November 2020</h1><br></br>
+          <div class="col">
+              <div class="card mb-3" style ="max-width: 90rem;">
+                <img class="card-img-to" src="https://media.istockphoto.com/photos/healthcare-professionals-during-a-meeting-at-the-hospital-picture-id1141333760?k=6&m=1141333760&s=612x612&w=0&h=PTTQKSFZxMuBJspsCJY0Q53I-_AJ7Hmt32RKnjT031w=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                  <div class="card-body">
+                    <h1 class="card-title">An Immersive Three Weeks</h1>
+                    <p class="card-text">We recently finished our first full block of medical school! Arriving on the first day was nerve-wracking. Pushing open the door to the Siebens building and hoping I was in the right place, both literally and figuratively, the “what if’s” swirled in my mind: What if I fail? What if I’ve forgotten everything from my prerequisites? What if my classmates don’t like me? What if I don’t like them?  What if I decide medical school isn’t for me?
+                      <p>The first three weeks have proven much less worrisome than that. The student support services at Mayo are robust, and the opportunities to find my niche in medicine are enormous. I haven’t forgotten everything and my classmates (and classmates in other years) are interesting, kind, and fun people!</p>
+                    </p>
+                    <p class="card-text"><small class="text-muted">By Jennifer Dens Higano | November 17, 2020 | Opinion | Leave a comment</small></p>
+                  </div>
+              </div>
+          </div>   
+          <br></br>
+      </div>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
+
+      <div class="profile-section">
+        <br></br><h1 id="item-3">October 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://cureusinc.files.wordpress.com/2020/07/wear-a-damn-mask.png?w=768&h=471&crop=1" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Wear a Damn Mask, PLEASE!</h1>
+                  <p class="card-text">When Covid first appeared in the US, several Asian physician friends had simple advice for me, “Wear a mask.” Having dealt with various coronaviruses for over a decade, this was the fundamental lesson taken from dealing with and controlling these respiratory viruses. Now, I may only be a dumb neurosurgeon, (said with humility, irony and in jest), but I know a thing or two about masks, having spent 30 years of life wearing them, sometimes for 12 or more hours at a time. There is nothing pleasurable about wearing a mask, but I have experienced first-hand how masks can protect patients and physicians from illness. More broadly I have seen how masks can protect healthcare workers from the worst of infectious diseases, even giving them supernatural-like protection when they must enter the belly of the beast while caring for highly contagious and fatal illnesses like Ebola. Meanwhile, each and every day, healthcare workers all over the world, including my own family members are able to avoid infection while caring for hospitalized Covid patients who are often spewing the virus everywhere. It’s incontrovertible – masks truly work!; they prevent Covid infections.</p>
+                  <p class="card-text"><small class="text-muted"> By John R. Adler, Jr., M.D. | October 23, 2020 | General, Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          <br></br></div><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://images.unsplash.com/photo-1588863746368-508ae44a7917?ixlib=rb-1.2.1&auto=format&fit=crop&w=1932&q=80" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Should Halloween Be Canceled This Year?</h1>
+                  <p class="card-text">With COVID-19 still being a very real danger, many parents have been asking me what we should do about trick-or-treating this year? Do we have to cancel Halloween?</p>
+                  <p class="card-text"><small class="text-muted"> By Hansa D. Bhargava, M.D. | October 9, 2020 | Editorial, Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+       <p>__________________________________________________________________________________________________________________________________________________</p>
+    
+      <div class="profile-section">
+        <br></br><h1 id="item-4">September 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://cdn.pixabay.com/photo/2020/03/05/19/18/technology-4905258_1280.jpg" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Does the Current Anti-science Crisis Emanate from our Imperious Scientific Journals?</h1>
+                  <p class="card-text">In many domains of modern public discourse and opinion, there appears to have arisen willful ignorance of science, and perhaps even worse in many situations, outright hostility to scientific knowledge. This is most visible in government inaction towards a number of looming crises, most notably manmade global warming, but it’s also widely felt in the public health arena with vaccinations, drug addiction and over-utilization of antibiotics. Scientists and physicians remain frustrated and puzzled that obvious scientific arguments can be so baldly dismissed in the public arena, and in the face of such great collective peril. At the core of this modern tragic dilemma seems to lie a fundamental mistrust of science.</p>
+                  <p class="card-text"><small class="text-muted"> Mikael Dillon | September 14, 2020 | News, Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+       <p>__________________________________________________________________________________________________________________________________________________</p>
+     
+      <div class="profile-section">
+        <br></br><h1 id="item-5">August 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/hand-arranging-wood-block-stacking-with-icon-healthcare-medical-for-picture-id917079152?k=6&m=917079152&s=612x612&w=0&h=msjL7EFn84rfAWM0bJWXkd1hNuy5rMVbCHPxbd3wAs0=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Medical Journals are Not Just for Docs in Ivory Towers</h1>
+                  <p class="card-text">Why do we publish? As the editor-in-chief of a medical journal, I struggle a lot with this question. After more than 200 years, peer-reviewed journals have clearly established themselves as medicine’s best arbitrator of truth. They are, or at least ideally should be, at the center of everything we practice in our clinics. Yet somehow we physicians, even those of us in academia, are blind to many of the important roles that journals serve in medicine today.</p>
+                  <p class="card-text"><small class="text-muted"> Owais Cline | August 11, 2020 | Editorial | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+   <p>__________________________________________________________________________________________________________________________________________________</p>
+     
+      <div class="profile-section">
+        <br></br><h1 id="item-6">July 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <!--<img class="card-img-to" src="https://media.istockphoto.com/photos/doctor-surgeon-analyzing-patient-brain-testing-result-and-human-on-picture-id962094932?k=6&m=962094932&s=612x612&w=0&h=Yv-BYVsg7FhWEr_Ru72tlQOS-SANyhWN6_-KOLfAK6E=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">-->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1i3gp_aN1cs" allowfullscreen></iframe>
+              </div>
+                <div class="card-body">
+                  <h1 class="card-title">A Handless Surgeon? It’s Not as Crazy as it Sounds.</h1>
+                  <p class="card-text">During my halcyon college days, long before I knew I would “grow up” to be a surgeon, I was a huge fan of Star Trek. Although the ideas behind warp speed travel and teleportation were mind blowing, I was even more captivated by “Bones” McCoy’s Tricorder. This and other similarly nifty little medical devices could in the hands of the right doctor affect surgical-like cures for most any disease non-invasively and without pain.</p>
+                  <p class="card-text"><small class="text-muted">Maraiah Carrey | July 10, 2020 | Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
+     
+      <div class="profile-section">
+        <br></br><h1 id="item-7">June 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/nurse-working-with-technology-in-operating-room-picture-id1139849841?k=6&m=1139849841&s=612x612&w=0&h=1r3pE99qhIVB8yCwrF034kSE1EAXTVnB82u65Jkpcr4=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Hospital Rankings: Can Docs Make the Process Less Stupid?</h1>
+                  <p class="card-text">It’s that time of the year. As Halloween decorations give way to Thanksgiving and now Christmas ornamentation, I, like many other American academic physicians, am sent an array of end-of-the-year email reminders from hospital and medical school leadership about sundry matters ranging from holiday parties to Press Ganey Scores. However none of these notifications stands out quite like being urged to update my membership with Doximity and thereby ensure my good standing with the social media network.
+                    <p>And what lofty academic or clinical function is being served? None other than the academic medical community’s best effort to get out the faculty vote for Doximity’s upcoming and all-important hospital and departmental yearly reputation scoring – a number which ultimately feeds into the even more important, annual hospital rankings among the US News and World Report.</p>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Maraiah Carrey | June 1, 2020 | Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+       <p>__________________________________________________________________________________________________________________________________________________</p>
+     
+      <div class="profile-section">
+        <br></br><h1 id="item-8">May 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/pcr-diagnostics-kit-epidemiologist-in-protective-suit-mask-and-works-picture-id1209968955?k=6&m=1209968955&s=612x612&w=0&h=XIsiW3fHcOCyLu763tcD5Gdz_vrFA365j9rrYIDDUgs=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Fake Science: More Common Than You Think</h1>
+                  <p class="card-text">Yet again the edifices of peer review were shaken by recent retractions in The New England Journal of Medicine and Cochrane Reviews. The article (and another “expression of concern publication”) retracted in the NEJM was authored by a Brigham and Women’s Hospital researcher (an institution of which I am a graduate), Dr. Piero Anversa, who has been implicated in the fraudulent publication of as many as 31 cardiac stem cell articles. Meanwhile, under seeming political pressures from a group of patient activists that decried an analysis entitled: “Exercise as treatment for patients with chronic fatigue syndrome,” deeming it a personal affront to their suffering, the editors of the prestigious Cochrane Reviews decided to withdraw it. The scientist who did the actual review for the journal lodged a bitter complaint about this “editorial” decision; it is hard to miss the irony here of Cochrane Reviews being a supposed impartial arbitrator of medical scientific quality that drives clinical decision-making. Fraudulent scientific results, politics trumping science, what is a reader to believe?</p>
+                  <p class="card-text"><small class="text-muted">Maraiah Carrey | May 12, 2020 | News | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br><br></br>
+       <p>__________________________________________________________________________________________________________________________________________________</p>
+     
+      <div class="profile-section">
+        <br></br><h1 id="item-9">April 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/health-care-billing-statement-picture-id1175811131?k=6&m=1175811131&s=612x612&w=0&h=U5rxhHYM3LRg8XlLDZ5Ynzl2K4xr9N_OlQcfr-dGhlc=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Conflicts of Interest and Financial Disclosures: It’s Time to Take a Stand Against Dishonest Authors</h1>
+                  <p class="card-text">The recent announcement that the Chief Medical Officer of Memorial Sloan Kettering Cancer Center failed multiple times to report significant financial conflicts of interest in journal articles and letters authored or co-authored by him has justifiably stirred up quite a hornets nest of controversy.
+                    <p>Truth be told, I too am personally quite angry about his glaring oversight, which at its worst, involved opinions communicated broadly to the medical community via the New England Journal of Medicine. As a physician innovator, entrepreneur and scholar I have sought to play by these disclosure rules, which simply mandate transparency, because I think they are the best tools for fairly communicating possible bias to readers.</p>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Maraiah Carrey | April 20, 2020 | Editorial | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+       <p>__________________________________________________________________________________________________________________________________________________</p>
+    
+      <div class="profile-section">
+        <br></br><h1 id="item-10">March 2020</h1><br></br>
+          <div class="col">
+              <div class="card mb-3" style ="max-width: 90rem;">
+                <img class="card-img-to" src="https://media.istockphoto.com/photos/innovation-and-science-concept-picture-id1177116437?k=6&m=1177116437&s=612x612&w=0&h=kbSnR5BnEtBeOzBp8bCXM48SEUffNw-c3Z1l7F7U_A0=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                  <div class="card-body">
+                    <h1 class="card-title">Since When is “Fast and Efficient” a Shortcoming?</h1>
+                    <p class="card-text">This past winter, I was notified in a short email that a scientific journal directory intended to drop Cureus from its list of preferred Open Access journals. No matter how specious any claim to exclusivity might be, who doesn’t crave getting past the big burly doorman guarding “The Club”? I reached out to this burly “Editor-in-Chief” of a “fraternity of journals” asking him how and why he arrived at his decision. After six email requests over nearly five months, I finally received a terse three-sentence 72-word response. In the eyes of the “Editor-in-Chief”, Cureus’ primary shortcoming was “submission to publication times are extremely short and you advertise your speed.” Basically, as I interpret this email rejection, Cureus’ sin is that it’s just too damn fast and efficient. Ahh… yeah, I guess Cureus is guilty as charged.</p>
+                    <p class="card-text"><small class="text-muted">By Maraiah Carrey | March 7, 2020 | Opinion | Leave a comment</small></p>
+                  </div>
+              </div>
+          </div>  
+      </div>
+      <br></br><br></br>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
+      
+      <div class="profile-section">
+        <br></br><h1 id="item-11">February 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/businessperson-holding-marker-on-document-picture-id1021543244?k=6&m=1021543244&s=612x612&w=0&h=htWBoRtXV5YlEEdJ6ke7Pk1Xbajuu7xA_jkVbYJxz4k=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Is it Time to Pull Back the Curtain from Peer Review?</h1>
+                  <p class="card-text"> Double-blind and single-blind processes continue to dominate academic peer review. Too often this results in a ‘black box’ – a system without sufficient transparency for authors, readers and reviewers alike. Hopefully one day fully transparent (and even public) peer review will come to be seen as acceptable throughout the world of academic publishing. For now we must take small steps to break down this barrier, just as Cureus works to break down barriers to publication.
+                  <p class="card-text"><small class="text-muted"> By John R. Adler, Jr., M.D. | February 9, 2020 | Editorial, Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br></br>
+      <p>__________________________________________________________________________________________________________________________________________________</p>
+
+      <div class="profile-section">
+        <br></br><h1 id="item-12">January 2020</h1><br></br>
+          <div class="col">
+            <div class="card mb-3" style ="max-width: 90rem;">
+              <img class="card-img-to" src="https://media.istockphoto.com/photos/action-portrait-of-male-chef-tossing-ingredients-in-bowl-picture-id1059836070?k=6&m=1059836070&s=612x612&w=0&h=ZQ5opRDo2G4_R3NBnOXbYEOQyFoXK2viZjYbb-GTKFY=" alt="Card image cap" style= "max-width: 90rem; max-height: 30rem; object-fit: cover;">
+                <div class="card-body">
+                  <h1 class="card-title">Iron Chefs in Medical School</h1>
+                  <p class="card-text">There are a lot of amazing opportunities that come with being a Mayo medical student. One of the aspects that has really made an impression on me is the school’s dedicated focus on student wellness, and I attribute a lot of that to the Student Life and Wellness Committee and their generous Student Initiated Wellness Activities (SIWA) grants. That’s a mouthful, but basically these grants fund activities related to improving the well being of the class, whether it is physical, emotional, mental, and/or spiritual. So far, our classmates have come up with some pretty cool ideas. To name just a few, we’ve done weekly yoga sessions to help de-stress, local escape rooms to help us bond in the beginning of the school year, and cross-country skiing with the second years as a fun outdoor winter event. We even get funding for our Baking Committee to bring treats to class to celebrate our birthdays.</p>
+                  <p class="card-text"><small class="text-muted">Editt Nikoyan | January 17, 2020 | Opinion | Leave a comment</small></p>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>

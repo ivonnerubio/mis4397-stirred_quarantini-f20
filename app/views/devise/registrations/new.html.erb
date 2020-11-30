@@ -1,14 +1,24 @@
 <%= render "devise/shared/error_messages", resource: resource %>
 
-  <p id="notice"><%= notice %></p>
-    <div class="card bg-light text-black text-center" style="width: 98rem; height:50rem;">
-      <div class="text-center mb-4">
-        <br></br><br></br><img class="mb-4" src="https://www.flaticon.com/svg/static/icons/svg/45/45952.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
-        <p>Connect. Discover. Share.<a href="https://caniuse.com/#feat=css-placeholder-shown"></a></p>
-      </div>
-                  <%= render "devise/registrations/form" %>
-
-          <%= render "devise/shared/links" %>
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://www.flaticon.com/svg/static/icons/svg/45/45952.svg" alt="" width="72" height="72">
+    <h2>Sign up</h2>
+    <p class="lead">Connect. Discover. Share.
+    <br>Join thousands of researchers, including Nobel Laureates, in scientific inquiry.
+    </p>
+  </div>
+      
+  <div class="row">
+    <div class="col">
+      <%= render "devise/registrations/form" %>
+      <br></br>
+      <%= render "devise/shared/links" %>
+      <br></br>
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+</div>
 
 <br></br>
+
