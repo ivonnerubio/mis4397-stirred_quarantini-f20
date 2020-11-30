@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20201120033833) do
     t.string   "body"
     t.string   "author_name"
     t.string   "post_type"
-    t.string   "image"
+    t.string   "image_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

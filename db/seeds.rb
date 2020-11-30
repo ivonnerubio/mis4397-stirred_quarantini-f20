@@ -37,5 +37,5 @@ blog_images = ["https://media.istockphoto.com/photos/healthcare-professionals-du
 print "creation"
 5.times do |i|
     print "created blog \n"
-    Blog.create( title: blog_titles[i], body: blog_post_text[i], author_name: blog_author_name[i], post_type: ["Opinion", "News", "Editorial", "Opinion", "Art"].sample, image: blog_images[i])
+    Blog.create( title: blog_titles[i], body: blog_post_text[i], author_name: blog_author_name[i], post_type: ["Opinion", "News", "Editorial", "Opinion", "Art"].sample, image_url: blog_images[i])
 end

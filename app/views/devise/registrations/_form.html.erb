@@ -1,0 +1,42 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <div class="row">
+  </div>
+  <hr class="mb-3">
+    <%= f.label :email %><br />
+    <div class="input-group">
+      <%= f.email_field :email, class: 'form-control font-italic text-muted font-weight-light', autofocus: true, autocomplete: "email", placeholder: "Email Address", required: true %>
+      <div class="invalid-feedback" style="width: 100%;">
+          Enter email.
+      </div>
+    </div>
+  </hr>
+  
+    <hr class="mb-3">
+      <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+      <%= f.password_field :password, class: 'form-control font-italic text-muted font-weight-light', autocomplete: "new-password", placeholder: "Password", required: true  %>
+    <div class="invalid-feedback" style="width: 100%;">
+          Enter password.
+    </div>
+    </hr>
+    
+    <hr class="mb-3">
+      <%= f.label :password_confirmation %><br />
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+      <%= f.password_field :password_confirmation, class: 'form-control font-italic text-muted font-weight-light', autocomplete: "new-password", placeholder: "Confirm Password", required: true  %>
+    <div class="invalid-feedback" style="width: 100%;">
+          Enter password.
+    </div>
+    </hr> 
+
+    <hr class="mb-4">
+      <%= f.submit "Sign up", class: 'btn btn-danger btn-lg btn-block' %>
+    <!--<button class="btn btn-danger btn-lg btn-block" type="submit">Create Post</button>-->
+  
+  <% end %>
+        
