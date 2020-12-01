@@ -4,6 +4,6 @@ class Blog < ApplicationRecord
     validates_presence_of :body
     validates_presence_of :author_name
     validates_presence_of :post_type
-    validates_presence_of :image_url
+ #   validates_presence_of :image_url
     
 end
