@@ -11,7 +11,8 @@
   <%= render "devise/shared/error_messages", resource: resource %>
     
   <div class="row">
-    <div class="col-md-4 order-md-2 mb-4">
+    <div class="col-6 order-md-2">
+      <h3>Change Password</h3>
       <hr class="mb-3">
         <%= f.label :email %><br />
         <div class="input-group">
@@ -59,7 +60,29 @@
 
   <div class="col-md-6">
     <h3>Cancel my account</h3>
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <hr class="mb-6">
+    <p>We'll miss you :( <br>Don't go!</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </hr>
+    <br>
+    <hr class "mb-4">
+    <%= button_to "Cancel my account", registration_path(resource_name), class: 'btn btn-danger btn-lg btn-block', data: { confirm: "Are you sure?" }, method: :delete %>
+    </hr>
   </div>
   
   </div>
