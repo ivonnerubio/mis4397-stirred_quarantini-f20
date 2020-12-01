@@ -59,12 +59,27 @@ ActiveRecord::Schema.define(version: 20201120033833) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
+    t.string   "string"
+    t.string   "recent_posts"
+    t.string   "text"
+    t.string   "article_title"
+    t.string   "archives"
+    t.integer  "year"
+    t.string   "post_title"
     t.string   "body"
     t.string   "author_name"
+    t.string   "authorID"
     t.string   "post_type"
+<<<<<<< HEAD
     t.string   "image_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+=======
+    t.string   "comment_section"
+    t.string   "ad_space"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+>>>>>>> ebd45657e0c3010726d7452fa6ad4121602f07a8
   end
 
   create_table "comments", force: :cascade do |t|
